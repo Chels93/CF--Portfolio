@@ -71,6 +71,7 @@ a:active {
     border-radius: 3px;
     border-bottom: 2px solid var(--buttonborderbottom-color);
     transition: opacity 0.2s;
+    transition: opacity 0.9s;
     text-align: center;
 }
 
