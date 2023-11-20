@@ -218,6 +218,10 @@ div{
     animation: 5s cloud-animation infinite alternate linear;
 }
 
+.cloud-back {
+    animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
 @keyframes cloud-animation {
     from {
         transform: translate(100px, 160px);
@@ -234,6 +238,4 @@ div{
         transform: translate(100px, 48px);
     }
 }
-.cloud-back {
-    animation: 34s cloud-move-reverse infinite alternate linear;
 }
