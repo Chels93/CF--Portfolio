@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Chelsea Guffogg's Work</title>
+    <title>Portfolio - Career Foundry</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" type="text/css" href="/style.production.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
 <body>
@@ -19,7 +19,8 @@
         <nav class="page-header_item">
             <ul role="menubar" class="navigation-list">
                 <li role="presentation">
-                    <a href="index.html" role="menuitem" class="navigation-list_item">Home</a>
+                    <a href="index.html" role="menuitem"
+                        class="navigation-list_item navigation-list_item--active">Home</a>
                 </li>
                 <li role="presentation">
                     <a href="about.html" role="menuitem" class="navigation-list_item">About</a>
@@ -28,63 +29,33 @@
                     <a href="contact.html" role="menuitem" class="navigation-list_item">Contact</a>
                 </li>
                 <li role="presentation">
-                    <a href="work.html" role="menuitem"
-                        class="navigation-list_item navigation-list_item--active">Work</a>
+                    <a href="work.html" role="menuitem" class="navigation-list_item">Work</a>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="wrapper">
-            <h1>Work</h1>
-            <div class="grid">
-                <div class="grid_item">
-                    <h2>Mobile Web App</h2>
-                    <p>
-                        Within this project, I was responsible for the front-end. It's written in React.js.
-                        Additionally,
-                        I've created the HTML and CSS templates.
-                    </p>
-                    <a href="#">See Project on GitHub</a>
-                </div>
-                <div class="grid_item">
-                    <h2>Native MacOS Application</h2>
-                    <p>
-                        Within this project I was responsible for the front-end. It is written in JavaFX.
-                    </p>
-                    <a href="#">See Project on GitHub</a>
-                </div>
-                <div class="grid_item">
-                    <h2>Node.js PDF Generation</h2>
-                    <p>
-                        Within this project I created a service that generates PDF out of webpages with the help of
-                        node.js server.
-                    </p>
-                    <a href="#">See Project on GitHub</a>
-                </div>
-                <div class="grid_item">
-                    <h2>Styleguide for Portfolio Page</h2>
-                    <p>
-                        Here you can find the styleguide I've created for this portfolio page. It was created with the livingstyleguide gem and grunt. 
-                    </p>
-                    <a href="#">See Project on GitHub</a>
-                </div>
-                <div class="grid_item">
-                    <h2>Medium Blog</h2>
-                    <p>
-                        I am also writing on medium.com about React.js.
-                    </p>
-                    <a href="#">See Project on GitHub</a>
-                </div>
-                <div class="grid_item">
-                    <h2>Your Project?</h2>
-                    <p>
-                        I can help in realizing front-end and back-end projects with the following technologies: React.js, JavaScript, Java, JavaFX, HTML and CSS. I am also happy to learn other technologies if needed.
-                    </p>
-                    <a href="contact.html">Contact Me</a>
-                </div>
-            </div>
-        </section>
+
+        <body>
+            <h1>
+                Contact Information
+            </h1>
+            <a href="tel: +1 336 705 2026">Phone: (336) 705-2026<br>
+                <a href="mailto: cacguff@gmail.com">cacguff@gmail.com </a><br>
+                <a href="mailto: cacguff@gmail.com">Contact Me</a>
+            </a>
+            <form action="" method="post" id="contact=form">
+                <label class="standard-label" for="contact-email">E-mail: </label>
+                <input type="email" id="contact-email" required>
+
+                <label class="standard-label" for="contact-phone">Telephone: </label>
+                <input type="tel" id="contact-phone" pattern="d{3}[\-]\d{3}[\-]\d{4}">
+
+                <label class="standard-label" for="contact-message">Message: </label>
+                <textarea max length="240" id="contact-message" required></textarea>
+                <button type="submit" value="Send message">Send Message </button>
+            </form>
+        </body>
     </main>
     <footer class="page-footer">
         <div class="social-media">
