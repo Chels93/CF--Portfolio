@@ -1,0 +1,14 @@
+{
+    "name": "cf-portfolio",
+    "version": "1.0.0",
+    "description": "Chelsea Guffogg's Portfolio",
+    "main": "index.html",
+    "scripts": {
+      "deploy": "gh-pages -d ."
+    },
+    "keywords": [],
+    "author": "Chelsea Guffogg",
+    "license": "ISC",
+    "homepage": "https://Chels93.github.io/CF--Portfolio"
+  }
+  
