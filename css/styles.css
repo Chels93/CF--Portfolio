@@ -118,12 +118,17 @@ img {
 }
 
 .profile_portrait {
-    width: 70px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Optional: makes the image circular */
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%; 
     display: block;
-    margin: 0 auto 1.5em auto; /* Center image and add bottom margin */
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    margin-bottom: 1.5em; 
 }
+
 
 .page-footer {
     padding: 20px;
