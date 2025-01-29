@@ -6,7 +6,7 @@
   }
   
   body {
-    font-family: "Raleway", sans-serif;
+    font-family: 'Raleway', sans-serif;
     background-color: #f0e7d8; /* Updated color */
     color: #333;
     line-height: 1.6;
@@ -18,9 +18,7 @@
     transition: color 0.3s ease;
   }
   
-  h1,
-  h2,
-  h3 {
+  h1, h2, h3 {
     font-weight: 600;
     color: #a1674a; /* Updated color */
   }
@@ -40,7 +38,9 @@
   }
   
   .page-header-img {
-    height: 50px;
+    width: 150px; /* Adjust size of the logo */
+    height: auto;
+    margin-bottom: 20px; /* Space between logo and nav items */
     border-radius: 50%;
   }
   
@@ -234,6 +234,14 @@
   @media (max-width: 768px) {
     .grid {
       grid-template-columns: 1fr;
+    }
+  
+    .navigation-list {
+      flex-direction: column;
+    }
+  
+    .navigation-list_item {
+      margin: 10px 0;
     }
   }
   
