@@ -10,6 +10,7 @@
     />
     <link rel="stylesheet" href="css/style.production.css" />
   </head>
+
   <body>
     <header class="page-header">
       <img
@@ -19,17 +20,17 @@
       />
       <nav class="page-header_item" role="navigation">
         <ul class="navigation-list">
-          <li><a href="index.html" class="navigation-list_item">Home</a></li>
-          <li><a href="about.html" class="navigation-list_item">About</a></li>
+          <li>
+            <a href="index.html" class="navigation-list_item">Home</a>
+        </li>
+          <li>
+            <a href="about.html" class="navigation-list_item">About</a>
+        </li>
           <li>
             <a href="contact.html" class="navigation-list_item">Contact</a>
           </li>
           <li>
-            <a
-              href="work.html"
-              class="navigation-list_item navigation-list_item--active"
-              >Work</a
-            >
+            <a href="work.html" class="navigation-list_item">Work</a>
           </li>
         </ul>
       </nav>
@@ -57,6 +58,165 @@
         projects below!
       </p>
       <a href="work.html" class="button">View My Work</a>
+      <section class="wrapper">
+        <h2>Work</h2>
+        <div class="carousel-container">
+          <div class="carousel-items">
+            <div class="carousel-item">
+              <h2>Pokédex JavaScript App</h2>
+              <p>
+                This project involved creating a Pokédex web app using
+                JavaScript, HTML, and CSS. It loads data from the Pokémon API to
+                display a list of Pokémon and allows users to click on an item
+                to view detailed information in a modal.
+              </p>
+              <p>
+                <a
+                  href="https://chels93.github.io/Pokedex/"
+                  target="_blank"
+                  aria-label="View Pokédex App Live Demo"
+                  >Live Demo</a
+                >
+                <a
+                  href="https://github.com/Chels93/Pokedex.git"
+                  target="_blank"
+                  aria-label="View Pokédex App on GitHub"
+                  >View Github Repository</a
+                >
+              </p>
+            </div>
+            <div class="carousel-item">
+              <h2>myFlix (movie_api) - Movie Web Application</h2>
+              <p>
+                This project is the server-side component of the "myFlix" movie
+                web application (movie_api), where users can access detailed
+                information about movies, directors, and genres. Built with the
+                MERN stack, it includes authentication, movie data management,
+                and user profile management.
+              </p>
+              <p>
+                <a
+                  href="https://git.heroku.com/mymoviesdb.git"
+                  target="_blank"
+                  aria-label="View myFlix Application"
+                  >Live Demo</a
+                >
+                <a
+                  href="https://github.com/Chels93/movie_api"
+                  target="_blank"
+                  aria-label="View myFlix Project on GitHub"
+                  >GitHub Repository</a
+                >
+              </p>
+            </div>
+            <div class="carousel-item">
+              <h2>myFlix React App</h2>
+              <p>
+                The myFlix React App is a single-page application (SPA) built
+                using React. It allows users to manage and view movie details,
+                save favorites, and manage profiles. The app is fully responsive
+                and provides a rich user experience.
+              </p>
+              <p>
+                <a
+                  href="https://cinevault93.netlify.app/"
+                  target="_blank"
+                  aria-label="View myFlix React App"
+                  >Live Demo</a
+                >
+                <a
+                  href="https://github.com/Chels93/myFlix-client"
+                  target="_blank"
+                  aria-label="View myFlix React Project on GitHub"
+                  >GitHub Repository</a
+                >
+              </p>
+            </div>
+            <div class="carousel-item">
+              <h2>Meet App</h2>
+              <p>
+                This project is a serverless, progressive web application (PWA)
+                built with React using test-driven development (TDD). It
+                integrates with the Google Calendar API to fetch upcoming events
+                and utilizes AWS Lambda for serverless functions.
+              </p>
+              <p>
+                <a
+                  href="https://chels93.github.io/meet/"
+                  target="_blank"
+                  aria-label="View Meet App"
+                  >Live Demo</a
+                >
+                <a
+                  href="https://github.com/Chels93/meet/"
+                  target="_blank"
+                  aria-label="View Meet App Project on GitHub"
+                  >GitHub Repository</a
+                >
+              </p>
+            </div>
+            <div class="carousel-item">
+              <h2>Mobile Chat App</h2>
+              <p>
+                The app allows users to communicate through messages, share
+                images, and send their location. It leverages Firebase for
+                real-time data storage, Firestore for chat persistence, and the
+                Gifted Chat library for the chat interface. Accessibility
+                features, including screen reader compatibility, are integrated
+                into the app. This React Native project demonstrates a fully
+                functional chat app with multiple features: anonymous
+                authentication using Firebase, real-time messaging using
+                Firestore, offline data storage with AsyncStorage. media sharing
+                with support for uploading images via the device's camera or
+                gallery, location sharing using device GPS, and screen reader
+                support for accessibility.
+              </p>
+              <p>
+                <a
+                  href="https://github.com/Chels93/chat-app"
+                  target="_blank"
+                  aria-label="View React Native Mobile Chat App Project on GitHub"
+                  >GitHub Repository</a
+                >
+              </p>
+              </div>
+              <div class="carousel-item">
+                <h2>CineVault Angular App</h2>
+                <p>
+                  CineVaultAngularClient is a single-page, responsive movie
+                  application built using Angular. It interfaces with the
+                  existing server-side code (REST API and database) to provide
+                  movie enthusiasts with detailed information on movies,
+                  directors, and genres, while allowing them to create
+                  personalized profiles to save their favorite movies.
+                </p>
+                <p>
+                  <a
+                    href="https://chels93.github.io/CineVault-Angular-client/"
+                    target="_blank"
+                    aria-label="View CineVault Angular App"
+                    >Live Demo</a
+                  >
+                  <a
+                    href="https://github.com/Chels93/CineVault-Angular-client"
+                    target="_blank"
+                    aria-label="View CineVault Angular App Project on GitHub"
+                    >GitHub Repository</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-nav">
+            <button class="carousel-button" onclick="moveCarousel(-1)">
+              &#10094;
+            </button>
+            <button class="carousel-button" onclick="moveCarousel(1)">
+              &#10095;
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="page-footer">
       <div class="social-media">
@@ -93,5 +253,44 @@
       </div>
     </footer>
     <script src="js/tota11y.min.js"></script>
+    <script>
+      let currentIndex = 0;
+
+      function moveCarousel(direction) {
+        const carousel = document.querySelector(".carousel-items");
+        const items = document.querySelectorAll(".carousel-item");
+        const totalItems = items.length;
+
+        // Update index
+        currentIndex += direction;
+        if (currentIndex >= totalItems) {
+          currentIndex = 0;
+        } else if (currentIndex < 0) {
+          currentIndex = totalItems - 1;
+        }
+
+        // Move carousel
+        const itemWidth = items[0].offsetWidth; // Get the width of one item
+        carousel.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+      }
+
+      // Initialize the carousel after DOM loads
+      document.addEventListener("DOMContentLoaded", () => {
+        const items = document.querySelectorAll(".carousel-item");
+
+        // Set the carousel container width dynamically
+        const carouselContainer = document.querySelector(".carousel-container");
+        const carouselItems = document.querySelector(".carousel-items");
+        carouselItems.style.display = "flex"; // Make sure items are in a row
+        carouselItems.style.transition = "transform 0.5s ease-in-out"; // Smooth sliding effect
+
+        // Adjust each item's width dynamically
+        items.forEach((item) => {
+          item.style.flex = "0 0 100%"; // Each item takes full width of the container
+        });
+
+        moveCarousel(0); // Show first item
+      });
+    </script>
   </body>
 </html>
