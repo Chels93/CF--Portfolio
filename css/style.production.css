@@ -21,7 +21,7 @@ body {
   height: 100%;
   font-family: "Raleway", sans-serif;
   line-height: 1.6;
-  background-color: var(--color-light-pink);
+  background-color: var(--color-deep-purple);
   color: var(--color-deep-purple);
   display: flex;
   flex-direction: column;
@@ -67,13 +67,11 @@ body {
   display: flex;
   justify-content: center;
   gap: 2rem; /* Space between menu items */
-  list-style: none;
 }
 
 .navigation-list_item {
-  font-size: 1rem;
-  font-weight: bold;
   color: var(--color-deep-purple); /* Text color */
+font-size: 1.5rem;
   text-decoration: none;
   transition: color 0.3s ease, background-color 0.3s ease;
   padding: 0.5rem 1rem;
@@ -113,7 +111,6 @@ body {
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid #118ab2;
   margin-bottom: 20px;
   transition: transform 0.3s ease-in-out;
 }
@@ -137,19 +134,19 @@ body {
 }
 
 .button {
-  background: var(--color-soft-pink);
   border: none;
-  color: white;
+  color: var(--color-mauve);
   padding: 10px 20px;
   font-size: 1rem;
   border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s;
+
   font-weight: bold;
 }
 
 .button:hover {
-  background: var(--color-warm-pink);
+  background: var(--color-mauve);
+  color: white;
 }
 
 /* Carousel Styling */
@@ -159,7 +156,7 @@ body {
   width: 100%;
   padding: 20px;
   justify-content: center;
-  background: var(--color-mauve);
+  background: var(--color-warm-pink);
 }
 
 .carousel {
