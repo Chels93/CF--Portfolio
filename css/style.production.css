@@ -193,7 +193,7 @@ body {
 /* Footer Styling */
 .page-footer {
   justify-content: center;
-  background-color: var(--color-deep-purple);
+  background-color: white;
   color: white;
   display: flex;
   align-items: center;
@@ -212,12 +212,6 @@ body {
   display: flex;
   justify-content: center;
   gap: 30px;
-}
-
-.social-media p {
-  color: #7c5869;
-  font-size: 18px;
-  margin-bottom: 20px;
 }
 
 .social-media a {
