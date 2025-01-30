@@ -29,19 +29,17 @@ body {
   justify-content: space-between;
   padding-top: 0;
   padding-bottom: 0;
-
 }
 
 /* General Styling for Main Content */
 .content {
   text-align: center;
   flex-grow: 1;
-
 }
 
 /* Header Styling */
 .page-header {
-  background-color: var(--color-deep-purple);
+  background-color: #faf9f6;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -65,20 +63,6 @@ body {
   border-radius: 50%;
 }
 
-.page-header_item {
-  background-color: var(--color-deep-purple);
-  padding: 1rem 2rem;
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: top 0.3s; /* Smooth transition when hiding/showing the header */
-}
-
 .navigation-list {
   display: flex;
   justify-content: center;
@@ -89,7 +73,7 @@ body {
 .navigation-list_item {
   font-size: 1rem;
   font-weight: bold;
-  color: white; /* Text color */
+  color: var(--color-deep-purple); /* Text color */
   text-decoration: none;
   transition: color 0.3s ease, background-color 0.3s ease;
   padding: 0.5rem 1rem;
@@ -97,8 +81,10 @@ body {
 }
 
 .navigation-list_item:hover {
-  color: var(--color-deep-purple);
-  background-color: var(--color-soft-pink); /* Light pink hover effect */
+  background-color: var(--color-warm-pink); /* Light pink hover effect */
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
 }
 
 .navigation-list_item--active {
@@ -193,7 +179,7 @@ body {
 /* Footer Styling */
 .page-footer {
   justify-content: center;
-  background-color: white;
+  background-color: #faf9f6;
   color: white;
   display: flex;
   align-items: center;
@@ -205,7 +191,6 @@ body {
   font-size: 1rem;
   margin-top: 20px;
   transition: transform 0.3s ease-in-out;
-
 }
 
 .social-media {
