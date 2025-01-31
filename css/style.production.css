@@ -156,50 +156,125 @@ body {
 
 /* Basic styling for carousel */
 .carousel-container {
-    position: relative;
-    width: 100%;
-    height: 300px; /* Adjust height if needed */
-    overflow: hidden;
+  margin-top: 40px;
+  display: relative;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 800px; /* Adjust height if needed */
+  overflow: hidden;
+}
+
+.carousel-items {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  background-color: #faf9f6;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-item img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.carousel-item h2 {
+    margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--color-deep-purple);
+}
+
+.carousel-item p {
+    text-align: center;  /* Ensures the text is centered */
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--color-deep-purple);
+    margin: 0 auto;  /* Centers the paragraph container (optional) */
+    max-width: 80%;  /* Optional, prevents text from stretching too wide */
   }
   
-  .carousel-items {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .carousel-item {
-    flex: 0 0 100%;
-    box-sizing: border-box;
-    padding: 20px;
-  }
-  
-  .carousel-nav {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* Center buttons vertically */
-    transform: translateY(-50%);
-    width: 100%; /* Ensure full width */
-  }
-  
-  .carousel-button {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border: none;
-    font-size: 2rem;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 10; /* Make sure buttons stay on top of content */
-  }
-  
-  .carousel-button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-  
-  
+
+.carousel-item a {
+  display: flex; /* Places buttons side by side */
+  justify-content: center; /* Centers them inside the container */
+  gap: 80px; /* Adds space between buttons */
+  width: 50%; /* Ensures full width */
+  max-width: 600px; /* Limits width for better styling */
+  margin-top: 20px;
+  margin: 0 auto; /* Centers the container */
+  flex: 1; /* Makes buttons equal width */
+  padding: 12px 20px;
+
+  color: var(--color-warm-pink);
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-item a:hover {
+  background-color: var(--color-mauve);
+  color: white;
+  transform: scale(1.05);
+}
+
+.carousel-item a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.carousel-button {
+  background-color: var(--color-warm-pink); /* Primary button color */
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  z-index: 101;
+}
+
+.carousel-button:hover {
+  background-color: var(--color-mauve);
+  transform: scale(1.05);
+}
+
+.carousel-button:active {
+  background-color: var(--color-deep-purple);
+  transform: scale(0.98);
+}
 
 /* Main Section */
 main {
@@ -393,7 +468,7 @@ button:hover {
 .grid_item p {
   font-size: 1rem;
   line-height: 1.5;
-  color: #333;
+  color: var(--color-deep-purple);
 }
 
 .grid_item a {
