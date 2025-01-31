@@ -50,16 +50,10 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  margin-bottom: 20px; /* Space below header */
+  margin-bottom: 40px; /* Space below header */
 }
 
 .page-header-img {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: var(--color-light-pink);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  text-decoration: none;
   padding: 1rem;
   border-radius: 50%; /* Circular header logo */
 }
@@ -81,12 +75,12 @@ body {
 }
 
 .navigation-list_item:hover {
-  background-color: var(--color-mauve); /* Light pink hover effect */
+  background-color: var(--color-warm-pink); /* Light pink hover effect */
   color: white;
 }
 
 .navigation-list_item--active {
-  background-color: var(--color-warm-pink); /* Highlight active link */
+  background-color: var(--color-mauve); /* Highlight active link */
   color: white;
 }
 
@@ -131,29 +125,6 @@ body {
   margin-bottom: 30px;
 }
 
-.button {
-  display: inline-block;
-  padding: 12px 20px;
-  background-color: var(--color-warm-pink); /* Primary button color */
-  color: white;
-  font-size: 1rem;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-top: 20px; /* Adds spacing above the button */
-}
-
-.button:hover {
-  background-color: var(--color-mauve);
-  transform: scale(1.05);
-}
-
-.button:active {
-  background-color: var(--color-deep-purple);
-  transform: scale(0.98);
-}
-
 /* Basic styling for carousel */
 .carousel-container {
   margin-top: 40px;
@@ -161,7 +132,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 100%;
+  width: 1000px;
   height: 800px; /* Adjust height if needed */
   overflow: hidden;
 }
@@ -208,7 +179,7 @@ body {
   display: flex; /* Places buttons side by side */
   justify-content: center; /* Centers them inside the container */
   gap: 80px; /* Adds space between buttons */
-  width: 50%; /* Ensures full width */
+  width: 228px; /* Ensures full width */
   max-width: 600px; /* Limits width for better styling */
   margin-top: 20px;
   margin: 0 auto; /* Centers the container */
@@ -229,7 +200,7 @@ body {
 }
 
 .carousel-item a:hover {
-  background-color: var(--color-mauve);
+  background-color: var(--color-warm-pink);
   color: white;
   transform: scale(1.05);
 }
@@ -240,41 +211,58 @@ body {
 }
 
 .carousel-nav {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transform: translateY(-50%);
-  z-index: 100;
-}
-
-.carousel-button {
-  background-color: var(--color-warm-pink); /* Primary button color */
-  color: white;
-  font-size: 1rem;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-top: 20px;
-  border: none;
-  padding: 12px 20px;
-  cursor: pointer;
-  z-index: 101;
-}
-
-.carousel-button:hover {
-  background-color: var(--color-mauve);
-  transform: scale(1.05);
-}
-
-.carousel-button:active {
-  background-color: var(--color-deep-purple);
-  transform: scale(0.98);
-}
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between; /* Ensures buttons go to the edges */
+    align-items: center;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    pointer-events: none; /* Allows clicks to go through except on buttons */
+  }
+  
+  .carousel-button {
+    background-color: var(--color-mauve);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    z-index: 11;
+    pointer-events: auto; /* Enables button clicks */
+  }
+  
+  .carousel-button:first-child {
+    position: absolute;
+    left: 0; /* Moves button to the left edge */
+    margin-left: 10px; /* Adds a small gap */
+  }
+  
+  .carousel-button:last-child {
+    position: absolute;
+    right: 0; /* Moves button to the right edge */
+    margin-right: 10px; /* Adds a small gap */
+  }
+  
+  .carousel-button:hover {
+    background-color: var(--color-warm-pink);
+    transform: scale(1.05);
+  }
+  
+  .carousel-button:active {
+    background-color: var(--color-deep-purple);
+    transform: scale(0.98);
+  }
+  
 
 /* Main Section */
 main {
@@ -292,12 +280,12 @@ h1 {
 
 a {
   font-size: 18px;
-  color: var(--color-warm-pink);
-  justify-content: center;
+  color: var(--color-mauve);
+  text-align: center;
 }
 
 a:hover {
-  color: var(--color-mauve);
+  color: var(--color-warm-pink);
 }
 
 /* About */
@@ -317,7 +305,7 @@ table {
 }
 
 thead {
-  background-color: var(--color-warm-pink);
+  background-color: var(--color-mauve);
   color: white;
 }
 
@@ -353,22 +341,24 @@ td {
 
 /* Style the Download CV button */
 .button {
-  display: inline-block;
-  padding: 12px 20px;
-  background-color: var(--color-warm-pink); /* Primary button color */
-  color: white;
-  font-size: 1rem;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-top: 20px; /* Adds spacing above the button */
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: var(--color-mauve); /* Primary button color */
+    color: white;
+    font-size: 1rem;
+    width: 228px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px; /* Adds spacing above the button */
+    border: none;
 }
 
 /* Button hover and click effects */
 .button:hover {
-  background-color: var(--color-mauve);
+  background-color: var(--color-warm-pink);
   transform: scale(1.05);
   color: white;
 }
@@ -406,24 +396,31 @@ textarea:focus {
   border-color: #886176;
 }
 
+form h3 {
+    text-align: center;
+    color: var(--color-deep-purple);
+}
+
 button {
-  display: inline-block;
-  padding: 12px 20px;
-  background-color: var(--color-warm-pink); /* Primary button color */
-  color: white;
-  font-size: 1rem;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-top: 20px; /* Adds spacing above the button */
-  border: none;
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: var(--color-mauve); /* Primary button color */
+    color: white;
+    font-size: 1rem;
+    width: 228px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px; /* Adds spacing above the button */
+    border: none;
 }
 
 button:hover {
-  background-color: var(--color-mauve);
+  background-color: var(--color-warm-pink);
   transform: scale(1.05);
+  color: white;
 }
 
 .button:active {
@@ -476,13 +473,13 @@ button:hover {
   justify-content: center; /* Centers them inside the container */
   gap: 80px; /* Adds space between buttons */
   width: 100%; /* Ensures full width */
-  max-width: 600px; /* Limits width for better styling */
+  max-width: 228px; /* Limits width for better styling */
   margin-top: 20px;
   margin: 0 auto; /* Centers the container */
   flex: 1; /* Makes buttons equal width */
   padding: 12px 20px;
 
-  color: var(--color-warm-pink);
+  color: var(--color-mauve);
   font-size: 1rem;
   font-weight: bold;
   text-align: center;
@@ -497,7 +494,7 @@ button:hover {
 
 /* Link Hover Effect */
 .grid_item a:hover {
-  background-color: var(--color-mauve);
+  background-color: var(--color-warm-pink);
   color: white;
   transform: scale(1.05);
 }
@@ -545,7 +542,7 @@ li {
   right: 0;
   height: 100px; /* Standard footer height */
   font-size: 1rem;
-  margin-top: 20px;
+  margin-top: 40px;
   transition: transform 0.3s ease-in-out;
 }
 
