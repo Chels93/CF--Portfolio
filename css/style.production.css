@@ -5,7 +5,6 @@
   --color-warm-pink: #e5989b;
   --color-mauve: #b5838d;
   --color-deep-purple: #6d6875;
-  --color-dark: #2a2a2a;
 }
 
 /* General Body Reset */
@@ -14,43 +13,44 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Ensure consistent box-sizing across elements */
 }
 
 /* Font and Body Setup */
 body {
   height: 100%;
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway", sans-serif; /* Use custom font for text */
   line-height: 1.6;
-  background-color: var(--color-deep-purple);
-  color: var(--color-deep-purple);
+  background-color: var(--color-deep-purple); /* Background color */
+  color: var(--color-deep-purple); /* Text color */
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  justify-content: space-between;
+  min-height: 100vh; /* Ensure body takes full height */
+  justify-content: space-between; /* Space out content from top and bottom */
   padding-top: 0;
   padding-bottom: 0;
 }
 
 /* General Styling for Main Content */
 .content {
-  text-align: center;
-  flex-grow: 1;
+  text-align: center; /* Center align text */
+  flex-grow: 1; /* Allow content to grow and take available space */
 }
 
 /* Header Styling */
 .page-header {
-  background-color: #faf9f6;
+  background-color: #faf9f6; /* Light background for header */
   color: white;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between; /* Space out the header items */
+  align-items: center; /* Center items vertically */
   padding: 0.5rem 0.5rem;
   position: relative;
+  height: 12rem;
   top: 0;
   left: 0;
   right: 0;
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Space below header */
 }
 
 .page-header-img {
@@ -61,56 +61,53 @@ body {
   letter-spacing: 2px;
   text-decoration: none;
   padding: 1rem;
-  border-radius: 50%;
+  border-radius: 50%; /* Circular header logo */
 }
 
+/* Navigation List Styling */
 .navigation-list {
   display: flex;
-  justify-content: center;
-  gap: 2rem; /* Space between menu items */
+  justify-content: center; /* Center the menu items */
+  gap: 1rem; /* Space between menu items */
 }
 
 .navigation-list_item {
   color: var(--color-deep-purple); /* Text color */
   font-size: 1.5rem;
   text-decoration: none;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition on hover */
   padding: 0.5rem 1rem;
-  border-radius: 5px;
+  border-radius: 8px; /* Rounded corners for items */
 }
 
 .navigation-list_item:hover {
-  background-color: var(--color-warm-pink); /* Light pink hover effect */
+  background-color: var(--color-mauve); /* Light pink hover effect */
   color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
 }
 
 .navigation-list_item--active {
   background-color: var(--color-warm-pink); /* Highlight active link */
   color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
 }
 
 /* Main Profile Section */
 .profile {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* Center profile items */
   justify-content: center;
   min-height: 80vh;
   padding: 40px;
   background-color: #faf9f6;
-  border-radius: 5px;
+  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
 .profile_portrait {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* Circular portrait */
   object-fit: cover;
   margin-bottom: 20px;
   transition: transform 0.3s ease-in-out;
@@ -129,50 +126,80 @@ body {
 .profile p {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #666;
+  color: var(--color-deep-purple);
   max-width: 700px;
   margin-bottom: 30px;
 }
 
 .button {
-  border: none;
-  color: var(--color-warm-pink);
-  padding: 10px 20px;
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: var(--color-warm-pink); /* Primary button color */
+  color: white;
   font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px; /* Adds spacing above the button */
 }
 
 .button:hover {
-  background: var(--color-soft-pink);
-  color: white;
+  background-color: var(--color-mauve);
+  transform: scale(1.05);
 }
 
-/* Carousel Styling */
+.button:active {
+  background-color: var(--color-deep-purple);
+  transform: scale(0.98);
+}
+
+/* Basic styling for carousel */
 .carousel-container {
-  display: flex;
-  overflow: hidden;
-  width: 100%;
-  padding: 20px;
-  justify-content: center;
-  background: var(--color-warm-pink);
-}
-
-.carousel {
-  display: flex;
-  background-color: #faf9f6;
-  gap: 20px;
-  transition: transform 0.5s ease-in-out;
-}
-
-.carousel-item {
-  background: white;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
+    position: relative;
+    width: 100%;
+    height: 300px; /* Adjust height if needed */
+    overflow: hidden;
+  }
+  
+  .carousel-items {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-item {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  
+  .carousel-nav {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center buttons vertically */
+    transform: translateY(-50%);
+    width: 100%; /* Ensure full width */
+  }
+  
+  .carousel-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10; /* Make sure buttons stay on top of content */
+  }
+  
+  .carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  
 
 /* Main Section */
 main {
@@ -180,7 +207,7 @@ main {
   max-width: 1200px;
   margin: 0 auto;
   background-color: #faf9f6;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 h1 {
@@ -190,6 +217,8 @@ h1 {
 
 a {
   font-size: 18px;
+  color: var(--color-warm-pink);
+  justify-content: center;
 }
 
 a:hover {
@@ -234,47 +263,45 @@ td {
 
 /* Center the container div */
 .about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .about h1 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 /* Style the Download CV button */
 .button {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: var(--color-warm-pink); /* Primary button color */
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px; /* Adds spacing above the button */
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: var(--color-warm-pink); /* Primary button color */
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px; /* Adds spacing above the button */
 }
 
 /* Button hover and click effects */
 .button:hover {
-    background-color: var(--color-mauve);
-    transform: scale(1.05);
+  background-color: var(--color-mauve);
+  transform: scale(1.05);
+  color: white;
 }
 
 .button:active {
-    background-color: var(--color-deep-purple);
-    transform: scale(0.98);
+  background-color: var(--color-deep-purple);
+  transform: scale(0.98);
 }
-
 
 /* Contact Form */
 form {
@@ -294,9 +321,8 @@ input,
 textarea {
   padding: 10px;
   border: 1px solid #ab9b96;
-  border-radius: 5px;
+  border-radius: 8px;
   font-size: 16px;
-  color: #2e2e2e;
 }
 
 input:focus,
@@ -306,19 +332,28 @@ textarea:focus {
 }
 
 button {
-  padding: 10px 20px;
-  background-color: #a1674a;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 18px;
-  cursor: pointer;
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: var(--color-warm-pink); /* Primary button color */
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
   text-align: center;
-  transition: background-color 0.3s ease;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px; /* Adds spacing above the button */
+  border: none;
 }
 
 button:hover {
-  background-color: #ba6e6e;
+  background-color: var(--color-mauve);
+  transform: scale(1.05);
+}
+
+.button:active {
+  background-color: var(--color-deep-purple);
+  transform: scale(0.98);
 }
 
 /* Work: Grid Section */
@@ -338,7 +373,7 @@ button:hover {
   background-color: #faf9f6;
   padding: 1.5rem;
   border: 2px solid var(--color-warm-pink);
-  border-radius: 5px;
+  border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -362,9 +397,44 @@ button:hover {
 }
 
 .grid_item a {
-  color: var(--color-deep-purple);
+  display: flex; /* Places buttons side by side */
+  justify-content: center; /* Centers them inside the container */
+  gap: 80px; /* Adds space between buttons */
+  width: 100%; /* Ensures full width */
+  max-width: 600px; /* Limits width for better styling */
+  margin-top: 20px;
+  margin: 0 auto; /* Centers the container */
+  flex: 1; /* Makes buttons equal width */
+  padding: 12px 20px;
+
+  color: var(--color-warm-pink);
+  font-size: 1rem;
   font-weight: bold;
   text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Link Hover Effect */
+.grid_item a:hover {
+  background-color: var(--color-mauve);
+  color: white;
+  transform: scale(1.05);
+}
+
+.grid_item:active {
+  background-color: var(--color-deep-purple);
+  transform: scale(0.98);
+}
+
+.grid_item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .grid_item img {
@@ -372,10 +442,6 @@ button:hover {
   max-width: 100%;
   border-radius: 8px;
   margin-top: 1rem;
-}
-
-.grid_item a {
-  justify-content: space-between;
 }
 
 ul {
@@ -387,18 +453,8 @@ li {
   color: var(--color-dark);
   padding: 6px 12px;
   margin: 5px;
-  border-radius: 5px;
+  border-radius: 8px;
   font-size: 0.9rem;
-}
-
-.grid_item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Link Hover Effect */
-.grid_item a:hover {
-  color: #ba6e6e;
 }
 
 /* Footer Styling */
