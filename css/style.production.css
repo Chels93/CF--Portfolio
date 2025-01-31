@@ -127,7 +127,6 @@ body {
 
 /* Basic styling for carousel */
 .carousel-container {
-  margin-top: 40px;
   display: relative;
   justify-content: center;
   align-items: center;
@@ -138,9 +137,8 @@ body {
 }
 
 .carousel-items {
-    margin-top: 20px;
   display: flex;
-  gap: 20px;
+
   transition: transform 0.5s ease-in-out;
 }
 
