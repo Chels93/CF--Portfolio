@@ -62,16 +62,22 @@ body {
   border-radius: 50%; /* Circular header logo */
 }
 
+.navigation {
+    display: flex;
+  }
+
 /* Navigation List Styling */
 .navigation-list {
   display: flex;
   justify-content: center; /* Center the menu items */
   gap: 1rem; /* Space between menu items */
+  list-style: none;
 }
 
 .navigation-list_item {
   color: var(--color-deep-purple); /* Text color */
   font-size: calc(1.2rem + 0.5v2w);
+  margin: 0 1rem;
   text-decoration: none;
   transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition on hover */
   padding: 0.5rem 1rem;
@@ -720,8 +726,12 @@ li {
   }
 
   .menu-toggle {
-    display: block;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
   }
+
 
   .menu-toggle:focus + .navigation,
   .menu-toggle.open + .navigation {
@@ -734,15 +744,25 @@ li {
   }
 
   .navigation {
-    display: none;
+    display: none; /* Hide navigation links on small screens */
     flex-direction: column;
-    width: 100%;
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    left: 0;
+    right: 0;
+    background-color: white; /* Optional for dropdown background */
+    z-index: 1000;
+  }
+
+  .navigation.open {
+    display: flex; /* Show navigation when the menu is open */
   }
 
   .navigation-list {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    display: flex;
   }
 
   .navigation-list_item {
@@ -751,7 +771,7 @@ li {
     width: 100%;
     text-align: center;
     padding: 0.8rem 1rem;
-    margin: 10px 0;
+    margin: 1rem 0;
   }
 
   .navigation.open {
