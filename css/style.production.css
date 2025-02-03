@@ -104,6 +104,12 @@ body {
   transform: scale(1.1);
 }
 
+.profile h1 {
+  font-size: 2.5rem;
+  color: var(--color-deep-purple);
+  margin-bottom: 20px;
+}
+
 .profile p {
   font-size: 1.1rem;
   line-height: 1.8;
@@ -282,6 +288,10 @@ a:hover {
 
 /* About */
 
+.about h1 {
+  text-align: center;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -326,6 +336,12 @@ td:nth-child(odd) {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.about h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 /* Style the Download CV button */
@@ -427,6 +443,12 @@ button:hover {
 }
 
 /* Work: Grid Section */
+.wrapper h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(300px, 1fr));
@@ -668,7 +690,8 @@ li {
     font-size: 0.9rem; /* Slightly smaller text for mobile */
   }
 
-  h1 {
+  h1,
+  .profile h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
   }
