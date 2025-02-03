@@ -231,6 +231,13 @@
 
         moveCarousel(0); // Show first item
       });
+
+      // Add menu toggle functionality
+      document
+        .querySelector(".menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector(".navigation").classList.toggle("open");
+        });
     </script>
   </body>
 </html>

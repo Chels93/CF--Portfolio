@@ -18,6 +18,7 @@
 
 /* Font and Body Setup */
 body {
+  font-size: 1rem;
   height: 100%;
   font-family: "Raleway", sans-serif; /* Use custom font for text */
   line-height: 1.6;
@@ -84,6 +85,15 @@ body {
   color: white;
 }
 
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--color-deep-purple);
+  cursor: pointer;
+}
+
 /* Main Profile Section */
 .profile {
   display: flex;
@@ -99,8 +109,8 @@ body {
 }
 
 .profile_portrait {
-  width: 200px;
-  height: 200px;
+  width: 30vw;
+  height: auto;
   border-radius: 50%; /* Circular portrait */
   object-fit: cover;
   margin-bottom: 20px;
@@ -131,8 +141,8 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 1000px;
-  height: 800px; /* Adjust height if needed */
+  width: 100%;
+  height: auto;
   overflow: hidden;
 }
 
@@ -149,6 +159,12 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.button,
+.carousel-item a,
+button {
+  padding: 15px 25px;
+}
+
 .carousel-item img {
   width: 100%;
   max-width: 100%;
@@ -157,7 +173,7 @@ body {
 }
 
 .carousel-item h2 {
-    margin-top: 20px;
+  margin-top: 20px;
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
@@ -165,20 +181,19 @@ body {
 }
 
 .carousel-item p {
-    text-align: center;  /* Ensures the text is centered */
-    font-size: 1rem;
-    line-height: 1.5;
-    color: var(--color-deep-purple);
-    margin: 0 auto;  /* Centers the paragraph container (optional) */
-    max-width: 80%;  /* Optional, prevents text from stretching too wide */
-  }
-  
+  text-align: center; /* Ensures the text is centered */
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-deep-purple);
+  margin: 0 auto; /* Centers the paragraph container (optional) */
+  max-width: 80%; /* Optional, prevents text from stretching too wide */
+}
 
 .carousel-item a {
   display: flex; /* Places buttons side by side */
   justify-content: center; /* Centers them inside the container */
   gap: 80px; /* Adds space between buttons */
-  width: 228px; /* Ensures full width */
+  width: auto; /* Ensures full width */
   max-width: 600px; /* Limits width for better styling */
   margin-top: 20px;
   margin: 0 auto; /* Centers the container */
@@ -210,58 +225,57 @@ body {
 }
 
 .carousel-nav {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: space-between; /* Ensures buttons go to the edges */
-    align-items: center;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    pointer-events: none; /* Allows clicks to go through except on buttons */
-  }
-  
-  .carousel-button {
-    background-color: var(--color-mauve);
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    border: none;
-    width: 42px;
-    height: 42px;
-    cursor: pointer;
-    z-index: 11;
-    pointer-events: auto; /* Enables button clicks */
-  }
-  
-  .carousel-button:first-child {
-    position: absolute;
-    left: 0; /* Moves button to the left edge */
-    margin-left: 10px; /* Adds a small gap */
-  }
-  
-  .carousel-button:last-child {
-    position: absolute;
-    right: 0; /* Moves button to the right edge */
-    margin-right: 10px; /* Adds a small gap */
-  }
-  
-  .carousel-button:hover {
-    background-color: var(--color-warm-pink);
-    transform: scale(1.05);
-  }
-  
-  .carousel-button:active {
-    background-color: var(--color-deep-purple);
-    transform: scale(0.98);
-  }
-  
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between; /* Ensures buttons go to the edges */
+  align-items: center;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  pointer-events: none; /* Allows clicks to go through except on buttons */
+}
+
+.carousel-button {
+  background-color: var(--color-mauve);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border: none;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  z-index: 11;
+  pointer-events: auto; /* Enables button clicks */
+}
+
+.carousel-button:first-child {
+  position: absolute;
+  left: 0; /* Moves button to the left edge */
+  margin-left: 10px; /* Adds a small gap */
+}
+
+.carousel-button:last-child {
+  position: absolute;
+  right: 0; /* Moves button to the right edge */
+  margin-right: 10px; /* Adds a small gap */
+}
+
+.carousel-button:hover {
+  background-color: var(--color-warm-pink);
+  transform: scale(1.05);
+}
+
+.carousel-button:active {
+  background-color: var(--color-deep-purple);
+  transform: scale(0.98);
+}
 
 /* Main Section */
 main {
@@ -273,7 +287,7 @@ main {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
@@ -340,19 +354,19 @@ td {
 
 /* Style the Download CV button */
 .button {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: var(--color-mauve); /* Primary button color */
-    color: white;
-    font-size: 1rem;
-    width: 228px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-top: 20px; /* Adds spacing above the button */
-    border: none;
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: var(--color-mauve); /* Primary button color */
+  color: white;
+  font-size: 1rem;
+  width: 228px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px; /* Adds spacing above the button */
+  border: none;
 }
 
 /* Button hover and click effects */
@@ -396,24 +410,24 @@ textarea:focus {
 }
 
 form h3 {
-    text-align: center;
-    color: var(--color-deep-purple);
+  text-align: center;
+  color: var(--color-deep-purple);
 }
 
 button {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: var(--color-mauve); /* Primary button color */
-    color: white;
-    font-size: 1rem;
-    width: 228px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-top: 20px; /* Adds spacing above the button */
-    border: none;
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: var(--color-mauve); /* Primary button color */
+  color: white;
+  font-size: 1rem;
+  width: 228px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px; /* Adds spacing above the button */
+  border: none;
 }
 
 button:hover {
@@ -539,10 +553,14 @@ li {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100px; /* Standard footer height */
+  height: 100px;
   font-size: 1rem;
   margin-top: 40px;
   transition: transform 0.3s ease-in-out;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
 }
 
 .social-media {
@@ -566,22 +584,54 @@ li {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-  .page-header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1.5rem 2rem;
+/* For screens smaller than 480px (phones and below) */
+@media (max-width: 480px) {
+  .carousel-container {
+    width: 100%;
+    height: 600px;
   }
 
-  .navigation-list {
-    flex-direction: column;
+  .carousel-item h2 {
+    font-size: 1.2rem;
+  }
+
+  .carousel-item p {
+    font-size: 0.9rem;
   }
 
   .navigation-list_item {
-    margin: 10px 0;
+    font-size: 1.2rem;
+  }
+
+  .wrapper {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .carousel-container {
+    width: 100%;
+  }
+
+  .carousel-item {
+    flex: 1 1 100%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .menu-toggle {
+    display: block;
   }
 
   nav {
@@ -589,15 +639,54 @@ li {
     text-align: center;
   }
 
-  .carousel {
+  .navigation {
+    display: none;
     flex-direction: column;
-    align-items: center;
+    width: 100%;
   }
 
-  .carousel-item {
-    width: 80%;
+  .navigation-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .navigation-list_item {
+    display: block;
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    margin: 10px 0;
+  }
+
+  .navigation.open {
+    display: block;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem 2rem;
+  }
+
+  .profile h1 {
+    font-size: 2rem;
+  }
+
+  .profile p {
+    font-size: 1rem;
+  }
+
+  .profile_portrait {
+    width: 50vw;
   }
 }
+
+.navigation.active {
+  display: flex;
+}
+
 @media (max-width: 1024px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
