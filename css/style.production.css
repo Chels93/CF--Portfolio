@@ -18,18 +18,18 @@
 
 /* Font and Body Setup */
 body {
-    height: 100%;
-    font-family: "Raleway", sans-serif; /* Use custom font for text */
-    line-height: 1.6;
-    background-color: var(--color-deep-purple); /* Background color */
-    color: var(--color-deep-purple); /* Text color */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensure body takes full height */
-    justify-content: space-between; /* Space out content from top and bottom */
-    padding-top: 0;
-    padding-bottom: 0;
-  }
+  height: 100%;
+  font-family: "Raleway", sans-serif; /* Use custom font for text */
+  line-height: 1.6;
+  background-color: var(--color-deep-purple); /* Background color */
+  color: var(--color-deep-purple); /* Text color */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure body takes full height */
+  justify-content: space-between; /* Space out content from top and bottom */
+  padding-top: 0;
+  padding-bottom: 0;
+}
 
 /* Header Styling */
 .page-header {
@@ -92,13 +92,13 @@ body {
 }
 
 .profile_portrait {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%; /* Circular portrait */
-    object-fit: cover;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease-in-out;
-  }
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* Circular portrait */
+  object-fit: cover;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
 
 .profile_portrait:hover {
   transform: scale(1.1);
@@ -656,10 +656,6 @@ li {
     padding: 10px;
   }
 
-  .profile_portrait {
-    width: 70vw;
-  }
-
   .wrapper {
     padding: 0 10px;
   }
@@ -765,10 +761,6 @@ li {
 
   .profile p {
     font-size: 1rem;
-  }
-
-  .profile_portrait {
-    width: 50vw;
   }
 }
 
