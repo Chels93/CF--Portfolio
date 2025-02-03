@@ -77,12 +77,7 @@ body {
 
 
 .menu-toggle {
-  display: block;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: var(--color-deep-purple);
-  cursor: pointer;
+display: none;
 }
 
 /* Main Profile Section */
@@ -633,7 +628,7 @@ li {
   }
 
   .menu-toggle {
-    display: block'
+    display: block;
   }
 
   .navigation {
