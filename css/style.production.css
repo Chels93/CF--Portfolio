@@ -18,55 +18,41 @@
 
 /* Font and Body Setup */
 body {
-  font-size: calc(1rem + 0.5vw);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  font-family: "Raleway", sans-serif; /* Use custom font for text */
-  line-height: 1.6;
-  background-color: var(--color-deep-purple); /* Background color */
-  color: var(--color-deep-purple); /* Text color */
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Ensure body takes full height */
-  justify-content: space-between; /* Space out content from top and bottom */
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-/* General Styling for Main Content */
-.content {
-  text-align: center; /* Center align text */
-  flex-grow: 1; /* Allow content to grow and take available space */
+    font-size: calc(1rem + 0.5vw);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: "Raleway", sans-serif;
+    line-height: 1.6;
+    background-color: var(--color-deep-purple);
+    color: var(--color-deep-purple);
+    justify-content: space-between;
 }
 
 /* Header Styling */
 .page-header {
-  background-color: #faf9f6; /* Light background for header */
-  color: white;
-  display: flex;
-  justify-content: space-between; /* Space out the header items */
-  align-items: center; /* Center items vertically */
-  padding: 0.5rem 0.5rem;
-  position: relative;
-  height: 12rem;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin-bottom: 40px; /* Space below header */
-}
+    background-color: #faf9f6;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    position: relative;
+    height: 12rem;
+    margin-bottom: 40px;
+  }
 
 .page-header-img {
   padding: 1rem;
   border-radius: 50%; /* Circular header logo */
 }
 
+/* Navigation Styling */
 .navigation {
     display: none;
   }
-
-/* Navigation List Styling */
+  
 .navigation-list {
   display: flex;
   justify-content: center; /* Center the menu items */
@@ -89,10 +75,6 @@ body {
   color: white;
 }
 
-.navigation-list_item--active {
-  background-color: var(--color-mauve); /* Highlight active link */
-  color: white;
-}
 
 .menu-toggle {
   display: block;
@@ -726,7 +708,7 @@ li {
   }
 
   .menu-toggle {
-   display: none;
+   display: block;
   }
 
 
@@ -741,26 +723,25 @@ li {
   }
 
   .navigation {
-    display: block; /* Hide navigation links on small screens */
-    flex-direction: column;
+    display: none;
     position: absolute;
-    top: 60px; /* Adjust based on header height */
+    top: 60px;
     left: 0;
     right: 0;
-    background-color: white; /* Optional for dropdown background */
+    background-color: white;
     z-index: 1000;
+    flex-direction: column;
+    align-items: center;
   }
 
   .navigation.open {
     display: flex; /* Show navigation when the menu is open */
-    justify-content: space-around;
   }
 
   .navigation-list {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    display: flex;
   }
 
   .navigation-list_item {
