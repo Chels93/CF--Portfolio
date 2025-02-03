@@ -18,17 +18,18 @@
 
 /* Font and Body Setup */
 body {
-  font-size: calc(1rem + 0.5vw);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  font-family: "Raleway", sans-serif;
-  line-height: 1.6;
-  background-color: var(--color-deep-purple);
-  color: var(--color-deep-purple);
-  justify-content: space-between;
-}
+    height: 100%;
+    font-family: "Raleway", sans-serif; /* Use custom font for text */
+    line-height: 1.6;
+    background-color: var(--color-deep-purple); /* Background color */
+    color: var(--color-deep-purple); /* Text color */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes full height */
+    justify-content: space-between; /* Space out content from top and bottom */
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 
 /* Header Styling */
 .page-header {
@@ -73,10 +74,6 @@ body {
 .navigation-list_item:hover {
   background-color: var(--color-warm-pink); /* Light pink hover effect */
   color: white;
-}
-
-.menu-toggle {
-  display: block;
 }
 
 /* Main Profile Section */
