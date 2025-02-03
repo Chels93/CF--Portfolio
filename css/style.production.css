@@ -632,6 +632,18 @@ li {
     font-size: 1.8rem;
   }
 
+  .menu-toggle {
+    display: block'
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .navigation.open {
+    display: flex;
+  }
+
   .navigation-list_item {
     font-size: 1.2rem;
   }
@@ -650,20 +662,6 @@ li {
 
   .wrapper {
     padding: 0 10px;
-  }
-}
-
-@media (max-width: 576px) {
-  .grid {
-    grid-template-columns: 1fr; /* Stacks grid items in a single column */
-  }
-
-  .profile_portrait {
-    width: 60vw; /* Adjusts portrait size for better fit */
-  }
-
-  .button {
-    width: 100%; /* Ensures buttons are full width on small screens */
   }
 }
 
@@ -708,7 +706,7 @@ li {
   }
 
   .menu-toggle {
-   display: block;
+   display: none;
   }
 
 
