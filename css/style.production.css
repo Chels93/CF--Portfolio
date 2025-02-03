@@ -63,7 +63,7 @@ body {
 }
 
 .navigation {
-    display: flex;
+    display: none;
   }
 
 /* Navigation List Styling */
@@ -95,7 +95,7 @@ body {
 }
 
 .menu-toggle {
-  display: flex;
+  display: block;
   background: none;
   border: none;
   font-size: 2rem;
@@ -803,7 +803,7 @@ li {
 }
 
 .navigation.active {
-  display: flex;
+  display: block;
 }
 
 @media (max-width: 1024px) {
