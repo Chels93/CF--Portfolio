@@ -271,9 +271,10 @@ main {
 }
 
 h1 {
-  font-size: 5vw;
+  font-size: 2vw;
   margin-bottom: 20px;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 a {
