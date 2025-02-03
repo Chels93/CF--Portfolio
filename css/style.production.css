@@ -726,10 +726,7 @@ li {
   }
 
   .menu-toggle {
-    font-size: 30px;
-    background: none;
-    border: none;
-    cursor: pointer;
+   display: none;
   }
 
 
@@ -744,7 +741,7 @@ li {
   }
 
   .navigation {
-    display: none; /* Hide navigation links on small screens */
+    display: block; /* Hide navigation links on small screens */
     flex-direction: column;
     position: absolute;
     top: 60px; /* Adjust based on header height */
@@ -756,6 +753,7 @@ li {
 
   .navigation.open {
     display: flex; /* Show navigation when the menu is open */
+    justify-content: space-around;
   }
 
   .navigation-list {
@@ -771,7 +769,7 @@ li {
     width: 100%;
     text-align: center;
     padding: 0.8rem 1rem;
-    margin: 1rem 0;
+    margin: 0 10px;
   }
 
   .navigation.open {
