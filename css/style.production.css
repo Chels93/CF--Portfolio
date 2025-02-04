@@ -323,13 +323,6 @@ td {
   font-size: 1rem;
 }
 
-td:nth-child(even) {
-  background-color: var(--color-soft-pink);
-}
-td:nth-child(odd) {
-  background-color: #faf9f6;
-}
-
 /* Center the container div */
 .about {
   display: flex;
