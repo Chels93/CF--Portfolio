@@ -142,12 +142,6 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.button,
-.carousel-item a,
-button {
-  padding: 12px 20px;
-}
-
 .carousel-item img,
 .grid_item {
   width: 100%;
@@ -343,8 +337,7 @@ td {
   background-color: var(--color-mauve);
   color: white;
   font-size: 1rem;
-  min-width: 72px;
-  max-width: 228px;
+  width: 228px;
   height: auto;
   font-weight: bold;
   text-align: center;
