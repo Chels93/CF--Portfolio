@@ -1,4 +1,4 @@
-/* Global Styles */
+/* Global Styles and Variables */
 :root {
   --color-light-pink: #ffcdb2;
   --color-soft-pink: #ffb4a2;
@@ -7,7 +7,7 @@
   --color-deep-purple: #6d6875;
 }
 
-/* General Body Reset */
+/* General Body Reset and Base styles */
 *,
 *::before,
 *::after {
@@ -16,22 +16,22 @@
   box-sizing: border-box; /* Ensure consistent box-sizing across elements */
 }
 
-/* Font and Body Setup */
+/* Body and Typography */
 body {
   height: 100%;
-  font-family: "Raleway", sans-serif; /* Use custom font for text */
+  font-family: "Raleway", sans-serif;
   line-height: 1.6;
-  background-color: var(--color-deep-purple); /* Background color */
-  color: var(--color-deep-purple); /* Text color */
+  background-color: var(--color-deep-purple);
+  color: var(--color-deep-purple);
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensure body takes full height */
-  justify-content: space-between; /* Space out content from top and bottom */
+  min-height: 100vh;
+  justify-content: space-between;
   padding-top: 0;
   padding-bottom: 0;
 }
 
-/* Header Styling */
+/* Header Section */
 .page-header {
   background-color: #faf9f6;
   color: white;
@@ -49,38 +49,38 @@ body {
   border-radius: 50%; /* Circular header logo */
 }
 
-/* Navigation Styling */
+/* Navigation Menu */
 .navigation {
   display: block;
 }
 
 .navigation-list {
   display: flex;
-  justify-content: center; /* Center the menu items */
-  gap: 1rem; /* Space between menu items */
+  justify-content: center;
+  gap: 1rem;
   list-style: none;
 }
 
 .navigation-list_item {
-  color: var(--color-deep-purple); /* Text color */
+  color: var(--color-deep-purple);
   font-size: calc(1.2rem + 0.5v2w);
   margin: 0 1rem;
   text-decoration: none;
-  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition on hover */
+  transition: color 0.3s ease, background-color 0.3s ease;
   padding: 0.5rem 1rem;
-  border-radius: 8px; /* Rounded corners for items */
+  border-radius: 8px;
 }
 
 .navigation-list_item:hover {
-  background-color: var(--color-warm-pink); /* Light pink hover effect */
+  background-color: var(--color-warm-pink);
   color: white;
 }
 
-/* Main Profile Section */
+/* Profile Section */
 .profile {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center profile items */
+  align-items: center;
   justify-content: center;
   min-height: 80vh;
   padding: 40px;
@@ -94,7 +94,7 @@ body {
 .profile_portrait {
   width: 200px;
   height: 200px;
-  border-radius: 50%; /* Circular portrait */
+  border-radius: 50%;
   object-fit: cover;
   margin-bottom: 20px;
   transition: transform 0.3s ease-in-out;
@@ -165,25 +165,24 @@ button {
 }
 
 .carousel-item p {
-  text-align: center; /* Ensures the text is centered */
+  text-align: center;
   font-size: 1rem;
   line-height: 1.5;
   color: var(--color-deep-purple);
-  margin: 0 auto; /* Centers the paragraph container (optional) */
-  max-width: 80%; /* Optional, prevents text from stretching too wide */
+  margin: 0 auto;
+  max-width: 80%;
 }
 
 .carousel-item a {
-  display: flex; /* Places buttons side by side */
-  justify-content: center; /* Centers them inside the container */
-  gap: 80px; /* Adds space between buttons */
-  width: auto; /* Ensures full width */
-  max-width: 600px; /* Limits width for better styling */
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  width: auto;
+  max-width: 600px;
   margin-top: 20px;
-  margin: 0 auto; /* Centers the container */
-  flex: 1; /* Makes buttons equal width */
+  margin: 0 auto;
+  flex: 1;
   padding: 12px 20px;
-
   color: var(--color-warm-pink);
   font-size: 1rem;
   font-weight: bold;
@@ -191,7 +190,6 @@ button {
   text-decoration: none;
   border-radius: 8px;
   transition: background-color 0.3s ease, transform 0.2s ease;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -214,12 +212,12 @@ button {
   top: 50%;
   transform: translateY(-50%);
   display: flex;
-  justify-content: space-between; /* Ensures buttons go to the edges */
+  justify-content: space-between;
   align-items: center;
   left: 0;
   right: 0;
   z-index: 10;
-  pointer-events: none; /* Allows clicks to go through except on buttons */
+  pointer-events: none;
 }
 
 .carousel-button {
@@ -236,19 +234,19 @@ button {
   height: 42px;
   cursor: pointer;
   z-index: 11;
-  pointer-events: auto; /* Enables button clicks */
+  pointer-events: auto;
 }
 
 .carousel-button:first-child {
   position: absolute;
-  left: 0; /* Moves button to the left edge */
-  margin-left: 10px; /* Adds a small gap */
+  left: 0;
+  margin-left: 10px;
 }
 
 .carousel-button:last-child {
   position: absolute;
-  right: 0; /* Moves button to the right edge */
-  margin-right: 10px; /* Adds a small gap */
+  right: 0;
+  margin-right: 10px;
 }
 
 .carousel-button:hover {
@@ -287,7 +285,7 @@ a:hover {
   color: var(--color-warm-pink);
 }
 
-/* About */
+/* About Section */
 
 .about h1 {
   text-align: center;
@@ -342,7 +340,7 @@ td {
 .button {
   display: inline-block;
   padding: 12px 20px;
-  background-color: var(--color-mauve); /* Primary button color */
+  background-color: var(--color-mauve);
   color: white;
   font-size: 1rem;
   width: 80%;
@@ -351,11 +349,10 @@ td {
   text-decoration: none;
   border-radius: 8px;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-top: 20px; /* Adds spacing above the button */
+  margin-top: 20px;
   border: none;
 }
 
-/* Button hover and click effects */
 .button:hover {
   background-color: var(--color-warm-pink);
   transform: scale(1.05);
@@ -370,7 +367,7 @@ td {
 /* Contact Form */
 input,
 textarea {
-  width: 100%; /* Full width on smaller screens */
+  width: 100%;
   padding: 10px;
   border: 1px solid #ab9b96;
   border-radius: 8px;
@@ -412,7 +409,7 @@ form h3 {
 button {
   display: inline-block;
   padding: 12px 20px;
-  background-color: var(--color-mauve); /* Primary button color */
+  background-color: var(--color-mauve);
   color: white;
   font-size: 1rem;
   width: 228px;
@@ -420,8 +417,10 @@ button {
   text-align: center;
   text-decoration: none;
   border-radius: 8px;
+  align-items: center;
+  justify-content: center;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-top: 20px; /* Adds spacing above the button */
+  margin-top: 20px;
   border: none;
 }
 
@@ -436,7 +435,7 @@ button:hover {
   transform: scale(0.98);
 }
 
-/* Work: Grid Section */
+/* Projects: Grid Section */
 .wrapper h1 {
   text-align: center;
   font-size: 2.5rem;
@@ -478,14 +477,14 @@ button:hover {
 }
 
 .grid_item a {
-  display: flex; /* Places buttons side by side */
-  justify-content: center; /* Centers them inside the container */
-  gap: 80px; /* Adds space between buttons */
-  width: 100%; /* Ensures full width */
-  max-width: 228px; /* Limits width for better styling */
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  width: 100%;
+  max-width: 228px;
   margin-top: 20px;
-  margin: 0 auto; /* Centers the container */
-  flex: 1; /* Makes buttons equal width */
+  margin: 0 auto;
+  flex: 1;
   padding: 12px 20px;
 
   color: var(--color-mauve);
@@ -501,7 +500,7 @@ button:hover {
   justify-content: center;
 }
 
-/* Link Hover Effect */
+/* Projects Link Hover Effect */
 .grid_item a:hover {
   background-color: var(--color-warm-pink);
   color: white;
@@ -582,7 +581,6 @@ li {
 }
 
 /* Responsive Design */
-/* For screens smaller than 480px (phones and below) */
 @media (max-width: 480px) {
   .button {
     width: 100%;
@@ -631,7 +629,6 @@ li {
     display: none;
   }
 
-  /* Make menu vertical and show when active */
   .navigation.active .navigation-list {
     display: flex;
     flex-direction: column;
@@ -681,7 +678,7 @@ li {
 
   .grid_item p,
   .carousel-item p {
-    font-size: 0.9rem; /* Slightly smaller text for mobile */
+    font-size: 0.9rem;
   }
 
   h1,
@@ -692,7 +689,7 @@ li {
 
   input,
   textarea {
-    font-size: 14px; /* Adjust font size for smaller screens */
+    font-size: 14px;
   }
 
   nav {
@@ -713,7 +710,7 @@ li {
   }
 
   .navigation.open {
-    display: flex; /* Show navigation when the menu is open */
+    display: flex;
   }
 
   .navigation-list {
@@ -766,7 +763,4 @@ li {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
-}
-
-@media (min-width: 1200px) {
 }
