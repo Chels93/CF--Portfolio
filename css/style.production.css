@@ -256,7 +256,8 @@ body {
 /* Main Section */
 main {
   padding: 40px;
-  max-width: 1200px;
+  width: 90%;
+  max-width: 90%;
   margin: 0 auto;
   background-color: #faf9f6;
   border-radius: 8px;
@@ -443,6 +444,8 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(3, minmax(600px, 1fr));
   gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .grid_item {
