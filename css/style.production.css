@@ -442,7 +442,7 @@ button:hover {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
   justify-content: center;
   align-items: center;
@@ -454,8 +454,8 @@ button:hover {
 
 .grid-container {
     display: flex;
-    justify-content: center; /* Centers the grid */
-    padding: 20px; /* Adds spacing on the sides */
+    justify-content: center; 
+    padding: 20px; 
   }
 
 .grid_item {
