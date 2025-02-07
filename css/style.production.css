@@ -534,6 +534,16 @@ li {
   font-size: 0.9rem;
 }
 
+.project-image {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+}
+
 /* Footer Styling */
 .page-footer {
   justify-content: center;
