@@ -452,6 +452,12 @@ button:hover {
   padding: 20px;
 }
 
+.grid-container {
+    display: flex;
+    justify-content: center; /* Centers the grid */
+    padding: 20px; /* Adds spacing on the sides */
+  }
+
 .grid_item {
   background-color: #faf9f6;
   padding: 20px;
