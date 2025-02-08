@@ -442,23 +442,28 @@ button:hover {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   width: 100%;
-  max-width: 1200px; 
-  margin: 0 auto; 
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
 }
 
 .grid-container {
-    display: flex;
-    justify-content: center; /* Centers the grid */
-    padding: 20px; /* Adds spacing on the sides */
-  }
+  display: grid;
+  justify-content: center;
+  padding: 20px;
+}
 
+/* Individual Project Cards */
 .grid_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   background-color: #faf9f6;
   padding: 20px;
   margin: 10px;
@@ -468,6 +473,12 @@ button:hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.grid_item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform-origin: center;
+}
+
 .grid_item h2 {
   font-size: 1.5rem;
   font-weight: bold;
@@ -475,39 +486,32 @@ button:hover {
   color: var(--color-deep-purple);
 }
 
-.grit_item h3 {
+.grid_item h3 {
   color: var(--color-mauve);
   font-weight: bolder;
 }
 
+/* Project Text */
 .grid_item p {
+  flex-grow: 1;
   font-size: 1rem;
   line-height: 1.5;
   color: var(--color-deep-purple);
 }
 
 .grid_item a {
-  display: flex;
-  justify-content: center;
-  gap: 80px;
-  width: 100%;
+  display: block;
+  text-align: center;
+  width: fit-content;
   max-width: 228px;
-  margin-top: 20px;
-  margin: 0 auto;
-  flex: 1;
+  margin: 10px auto;
   padding: 12px 20px;
-
   color: var(--color-mauve);
   font-size: 1rem;
   font-weight: bold;
-  text-align: center;
   text-decoration: none;
   border-radius: 8px;
   transition: background-color 0.3s ease, transform 0.2s ease;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /* Projects Link Hover Effect */
@@ -517,34 +521,12 @@ button:hover {
   transform: scale(1.05);
 }
 
-.grid_item:active {
-  background-color: var(--color-deep-purple);
-  transform: scale(0.98);
-}
-
-.grid_item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
+/* Project Images */
 .grid_item img {
   width: 100%;
   max-width: 100%;
   border-radius: 8px;
   margin-top: 1rem;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  color: var(--color-dark);
-  padding: 6px 12px;
-  margin: 5px;
-  border-radius: 8px;
-  font-size: 0.9rem;
 }
 
 .project-image {
@@ -557,6 +539,11 @@ li {
   margin: 0 auto;
 }
 
+/* Push Project buttons to the bottom */
+.grid_item p:last-of-type {
+    margin-bottom: auto; 
+  }
+  
 /* Footer Styling */
 .page-footer {
   justify-content: center;
