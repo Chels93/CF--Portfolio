@@ -442,7 +442,7 @@ button:hover {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: 1.5rem;
   justify-content: center;
   align-items: stretch;
@@ -455,7 +455,6 @@ button:hover {
 .grid-container {
   display: grid;
   justify-content: center;
-  padding: 20px;
 }
 
 /* Individual Project Cards */
