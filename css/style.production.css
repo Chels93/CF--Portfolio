@@ -362,7 +362,25 @@ td {
   transform: scale(0.98);
 }
 
-/* Contact Form */
+/* Contact Page */
+
+.contact-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-info a {
+  display: block;
+  font-size: 1.2rem;
+  color: var(--color-deep-purple);
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.contact-info a:hover {
+  color: var(--color-warm-pink);
+}
+
 input,
 textarea {
   width: 100%;
