@@ -387,6 +387,7 @@ textarea {
 form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   background-color: #faf9f6;
   padding: 30px;
