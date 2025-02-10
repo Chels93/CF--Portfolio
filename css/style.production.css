@@ -166,24 +166,36 @@ body {
 }
 
 .carousel-item a {
-    display: block;
-    text-align: center;
-    width: fit-content;
-    max-width: 180px;
-    margin: 10px auto;
-    padding: 8px 16px;
-    color: var(--color-mauve);
-    font-size: 0.9rem;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  width: auto;
+  max-width: 600px;
+  margin-top: 20px;
+  margin: 0 auto;
+  flex: 1;
+  padding: 12px 20px;
+  color: var(--color-warm-pink);
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .carousel-item a:hover {
   background-color: var(--color-warm-pink);
   color: white;
   transform: scale(1.05);
+}
+
+.carousel-item a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .carousel-nav {
