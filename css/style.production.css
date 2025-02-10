@@ -255,7 +255,7 @@ body {
 
 /* Main Section */
 main {
-  padding: 40px;
+  padding: 20px;
   width: 90%;
   max-width: 90%;
   margin: 0 auto;
@@ -402,8 +402,9 @@ textarea:focus {
 .form-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 80vh;
+  align-items: flex-start;
+  height: auto;
+  padding: 20px;
 }
 
 form {
