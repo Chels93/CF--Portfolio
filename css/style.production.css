@@ -402,7 +402,7 @@ textarea:focus {
 .form-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   height: auto;
   padding: 20px;
 }
