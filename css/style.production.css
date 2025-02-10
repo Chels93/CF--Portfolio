@@ -384,7 +384,7 @@ textarea {
   min-height: 120px;
 }
 
-form {
+#contact-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
