@@ -393,6 +393,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: #faf9f6;
   padding: 30px;
   border-radius: 10px;
