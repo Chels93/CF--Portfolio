@@ -3,593 +3,289 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>myFlix Angular Client - Case Study</title>
-   
+    <meta
+      name="description"
+      content="Chelsea Guffogg's Case Studies - UX/UI Designer and Web Developer showcasing Angular, React Native, and JavaScript projects."
+    />
+    <title>Case Studies - Chelsea Guffogg</title>
+    
+    <!-- Font and CSS links - OPTIMIZED -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <!-- USING YOUR MAIN CSS FILE -->
+    <link rel="stylesheet" href="css/style.production.css" />
+    
+    <!-- SMALLER NAVIGATION STYLES -->
+    <style>
+        /* Force smaller navigation */
+        .navigation-list_item {
+            font-size: 0.9rem !important;
+            padding: 0.5rem 0.8rem !important;
+        }
+
+        @media (max-width: 768px) {
+            .navigation-list_item {
+                font-size: 0.85rem !important;
+                padding: 0.6rem 0.7rem !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navigation-list_item {
+                font-size: 0.8rem !important;
+                padding: 0.5rem 0.6rem !important;
+            }
+        }
+    </style>
 </head>
+
 <body>
+    <!-- EXACT SAME HEADER AS OTHER PAGES -->
     <header class="page-header">
-      <img
-        class="page-header-img"
-        src="img/PersonalLogo.png"
-        alt="Chelsea Guffogg's personal logo"
-      />
-      <nav class="navigation" role="navigation">
-        <ul class="navigation-list">
-          <li><a href="index.html" class="navigation-list_item">Home</a></li>
-          <li><a href="about.html" class="navigation-list_item">About</a></li>
-          <li>
-            <a href="projects.html" class="navigation-list_item">Projects</a>
-          </li>
-          <li>
-            <a href="case-studies.html" class="navigation-list-item">Case Studies</a>
-          </li>
-          <li>
-            <a href="contact.html" class="navigation-list_item">Contact</a>
-          </li>
-        </ul>
-      </nav>
+        <img
+            class="page-header-img"
+            src="img/PersonalLogo.png"
+            alt="Chelsea Guffogg's personal logo"
+        />
+        <nav class="navigation" role="navigation">
+            <ul class="navigation-list">
+                <li><a href="index.html" class="navigation-list_item">Home</a></li>
+                <li><a href="about.html" class="navigation-list_item">About</a></li>
+                <li><a href="projects.html" class="navigation-list_item">Projects</a></li>
+                <li><a href="case-studies.html" class="navigation-list_item">Case Studies</a></li>
+                <li><a href="contact.html" class="navigation-list_item">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="project-tag">Angular Development Case Study</div>
-                <h1>myFlix Angular Client</h1>
-                <p class="hero-subtitle">Building a modern, responsive movie discovery platform using Angular 9+, demonstrating professional development practices and comprehensive technical documentation for the CareerFoundry Web Development Program.</p>
-                
-                <div class="project-details">
-                    <div class="detail-item">
-                        <div class="detail-label">Role</div>
-                        <div>Frontend Developer & Technical Documentation Lead</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Timeline</div>
-                        <div>6 weeks (Achievement 6)</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Context</div>
-                        <div>CareerFoundry Full Stack Immersion Course</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Challenge</div>
-                        <div>Single-page Angular application with REST API integration</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number">6</div>
-                    <div class="stat-label">Weeks Development</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">7</div>
-                    <div class="stat-label">Angular Components</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Requirements Met</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">15+</div>
-                    <div class="stat-label">User Stories Completed</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Main Content -->
-    <section class="main-content">
-        <div class="container">
-            <!-- Problem Statement -->
-            <div class="section">
-                <h2 class="section-title">The Core Problem</h2>
-                <div class="section-content">
-                    <p>Movie enthusiasts need a modern, accessible platform to discover detailed information about movies, directors, and genres while being able to create and manage personal profiles with favorite movie collections. The challenge was to build a single-page, responsive movie application using Angular that interfaces with existing server-side code, demonstrating proficiency in Angular development, Agile project management, and technical documentation.</p>
-                </div>
-                
-                <div class="challenge-grid">
-                    <div class="challenge-card">
-                        <h3 class="challenge-title">Information Access</h3>
-                        <p>Users need comprehensive information about films, directors, and genres in a modern, intuitive interface.</p>
-                    </div>
-                    <div class="challenge-card">
-                        <h3 class="challenge-title">Personal Management</h3>
-                        <p>Creating and maintaining user profiles with personalized favorite movie collections.</p>
-                    </div>
-                    <div class="challenge-card">
-                        <h3 class="challenge-title">Technical Integration</h3>
-                        <p>Building a responsive Angular frontend that effectively communicates with existing REST API.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Development Phases -->
-            <div class="section">
-                <h2 class="section-title">Development Journey</h2>
-                
-                <div class="phase-grid">
-                    <!-- Phase 1 -->
-                    <div class="phase-card">
-                        <div class="phase-header">
-                            <h3 class="phase-title">Phase 1: Project Planning & Agile Setup</h3>
-                            <p class="phase-subtitle">Implementing professional development methodologies</p>
-                        </div>
-                        <div class="phase-content">
-                            <p>Before writing any code, I established a comprehensive project management approach using Agile principles, demonstrating professional development practices that mirror real-world tech industry workflows.</p>
-                            
-                            <div class="phase-highlights">
-                                <div class="highlight-item">
-                                    <div class="highlight-title">Kanban Board Implementation</div>
-                                    <p>Created detailed user stories with story points to track progress throughout development</p>
-                                </div>
-                                <div class="highlight-item">
-                                    <div class="highlight-title">User Story Creation</div>
-                                    <p>"As a user, I want to receive information on movies, directors, and genres" - crafted to reflect actual user needs</p>
-                                </div>
-                                <div class="highlight-item">
-                                    <div class="highlight-title">User Flow Design</div>
-                                    <p>Comprehensive navigation mapping from welcome screen to detailed movie views</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Phase 2 -->
-                    <div class="phase-card">
-                        <div class="phase-header">
-                            <h3 class="phase-title">Phase 2: Angular Foundation & Architecture</h3>
-                            <p class="phase-subtitle">Professional development environment setup</p>
-                        </div>
-                        <div class="phase-content">
-                            <p>Using Angular CLI, I generated the initial project structure following Angular best practices, ensuring scalability and maintainability.</p>
-                            
-                            <div class="code-block">
-<span class="code-comment">// Angular CLI Implementation</span>
-<span class="code-keyword">ng new</span> myflix-angular-client
-<span class="code-keyword">ng generate component</span> welcome-page
-<span class="code-keyword">ng generate component</span> movie-card
-<span class="code-keyword">ng generate component</span> movie-details
-<span class="code-keyword">ng generate service</span> fetch-api-data
-                            </div>
-                            
-                            <div class="phase-highlights">
-                                <div class="highlight-item">
-                                    <div class="highlight-title">Component Structure</div>
-                                    <p>Modular components for reusability and maintainability</p>
-                                </div>
-                                <div class="highlight-item">
-                                    <div class="highlight-title">Service Layer</div>
-                                    <p>Centralized API communication through dedicated services</p>
-                                </div>
-                                <div class="highlight-item">
-                                    <div class="highlight-title">Routing Strategy</div>
-                                    <p>Single-page application with dynamic routing between views</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Phase 3 -->
-                    <div class="phase-card">
-                        <div class="phase-header">
-                            <h3 class="phase-title">Phase 3: User Authentication & Angular Material</h3>
-                            <p class="phase-subtitle">Professional user interface implementation</p>
-                        </div>
-                        <div class="phase-content">
-                            <p>Implementation of user registration and login forms using Angular Material, creating both visually appealing and functionally robust interfaces with clear feedback and error handling.</p>
-                            
-                            <div class="phase-highlights">
-                                <div class="highlight-item">
-                                    <div class="highlight-title">Registration Form</div>
-                                    <p>Username, password, email, and date of birth fields with validation</p>
-                                </div>
-                                <div class="highlight-item">
-                                    <div class="highlight-title">Material Design</div>
-                                    <p>Cards, form fields, buttons, and navigation elements</p>
-                                </div>
-                                <div class="highlight-item">
-                                    <div class="highlight-title">Responsive Design</div>
-                                    <p>Mobile-first approach ensuring accessibility across devices</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Phase 4 -->
-                    <div class="phase-card">
-                        <div class="phase-header">
-                            <h3 class="phase-title">Phase 4: Core Application Features</h3>
-                            <p class="phase-subtitle">Movie discovery interface development</p>
-                        </div>
-                        <div class="phase-content">
-                            <p>The movie card component became the foundation of the user experience, displaying essential movie information in an accessible, visually appealing format while handling various data types and maintaining responsive design.</p>
-                            
-                            <div class="code-block">
-<span class="code-comment">// Routing Implementation</span>
-<span class="code-keyword">const</span> routes: Routes = [
-  { path: <span class="code-string">'welcome'</span>, component: WelcomePageComponent },
-  { path: <span class="code-string">'movies'</span>, component: MovieCardComponent },
-  { path: <span class="code-string">'director/:name'</span>, component: DirectorViewComponent },
-  { path: <span class="code-string">'genre/:name'</span>, component: GenreViewComponent },
-  { path: <span class="code-string">'profile'</span>, component: UserProfileComponent },
-  { path: <span class="code-string">''</span>, redirectTo: <span class="code-string">'welcome'</span>, pathMatch: <span class="code-string">'full'</span> }
-];
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Phase 5 -->
-                    <div class="phase-card">
-                        <div class="phase-header">
-                            <h3 class="phase-title">Phase 5: Advanced Features & Profile Management</h3>
-                            <p class="phase-subtitle">User personalization and specialized views</p>
-                        </div>
-                        <div class="phase-content">
-                            <p>The user profile component represented the personalization aspect, allowing users to manage account information and view curated favorite movies, while director and genre views provided comprehensive educational content.</p>
-                            
-                            <div class="phase-highlights">
-                                <div class="highlight-item">
-                                    <div class="highlight-title">Profile Features</div>
-                                    <p>Account management, favorites curation, and secure deregistration options</p>
-                                </div>
-                                <div class="highlight-item">
-                                    <div class="highlight-title">Director Views</div>
-                                    <p>Biographical information and complete filmography access</p>
-                                </div>
-                                <div class="highlight-item">
-                                    <div class="highlight-title">Genre Views</div>
-                                    <p>Genre descriptions and related movie discovery</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Phase 6 -->
-                    <div class="phase-card">
-                        <div class="phase-header">
-                            <h3 class="phase-title">Phase 6: Documentation & Professional Handoffs</h3>
-                            <p class="phase-subtitle">Comprehensive technical documentation</p>
-                        </div>
-                        <div class="phase-content">
-                            <p>Created extensive documentation using TypeDoc for Angular components and JSDoc for technical specifications, demonstrating professional development standards.</p>
-                            
-                            <div class="code-block">
-<span class="code-comment">/**
- * Component for displaying individual movie cards
- * @component MovieCardComponent
- * @description Renders movie information in card format
- */</span>
-@Component({
-  selector: <span class="code-string">'app-movie-card'</span>,
-  templateUrl: <span class="code-string">'./movie-card.component.html'</span>,
-  styleUrls: [<span class="code-string">'./movie-card.component.scss'</span>]
-})
-<span class="code-keyword">export class</span> MovieCardComponent {
-  <span class="code-comment">/**
-   * Navigates to detailed movie view
-   * @param movieId - Unique identifier for selected movie
-   */</span>
-  openMovieDetails(movieId: string): <span class="code-keyword">void</span> {
-    <span class="code-comment">// Implementation details</span>
-  }
-}
-                            </div>
-                            
-                            <div class="phase-highlights">
-                                <div class="highlight-item">
-                                    <div class="highlight-title">TypeDoc Documentation</div>
-                                    <p>Comprehensive component documentation for maintainability</p>
-                                </div>
-                                <div class="highlight-item">
-                                    <div class="highlight-title">JSDoc Coverage</div>
-                                    <p>Technical specifications for service methods and API interactions</p>
-                                </div>
-                                <div class="highlight-item">
-                                    <div class="highlight-title">Agile Reflection</div>
-                                    <p>Kanban board finalization with story point accuracy analysis</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Phase 7 -->
-                    <div class="phase-card">
-                        <div class="phase-header">
-                            <h3 class="phase-title">Phase 7: Testing, Deployment & Community Engagement</h3>
-                            <p class="phase-subtitle">Production deployment and portfolio integration</p>
-                        </div>
-                        <div class="phase-content">
-                            <p>Deploying the Angular application to GitHub Pages required specific configuration for single-page application routing and production optimization, culminating in professional portfolio integration.</p>
-                            
-                            <div class="phase-highlights">
-                                <div class="highlight-item">
-                                    <div class="highlight-title">GitHub Pages Deployment</div>
-                                    <p>Custom deployment script with SPA routing configuration</p>
-                                </div>
-                                <div class="highlight-item">
-                                    <div class="highlight-title">Production Optimization</div>
-                                    <p>Bundle size reduction and environment-specific configurations</p>
-                                </div>
-                                <div class="highlight-item">
-                                    <div class="highlight-title">Portfolio Integration</div>
-                                    <p>Professional case study documentation and live demonstrations</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Core Features -->
-            <div class="section">
-                <h2 class="section-title">Core Application Features</h2>
-                <div class="section-content">
-                    <p>The myFlix Angular application successfully addresses all project requirements while demonstrating professional development practices and modern web application architecture.</p>
-                </div>
-                
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">🎬</div>
-                        <h3 class="feature-title">Welcome View</h3>
-                        <p>Seamless user registration and login functionality with Angular Material forms and comprehensive validation.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">📚</div>
-                        <h3 class="feature-title">Movie Catalog</h3>
-                        <p>Comprehensive movie browsing with responsive design and intuitive card-based layout for optimal discovery.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🔍</div>
-                        <h3 class="feature-title">Single Movie View</h3>
-                        <p>Detailed movie information with navigation to director and genre views, plus favorites management.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">👤</div>
-                        <h3 class="feature-title">Profile Management</h3>
-                        <p>Complete user account and favorites management with secure authentication and data persistence.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🎭</div>
-                        <h3 class="feature-title">Director Views</h3>
-                        <p>Specialized information screens with biographical details, filmography, and enhanced movie discovery.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🏷️</div>
-                        <h3 class="feature-title">Genre Views</h3>
-                        <p>Genre-specific details and related movie recommendations for targeted content discovery.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Screenshot Section -->
-    <section class="screenshot-section">
-        <div class="container">
-            <div class="screenshot-container">
-                <h2 class="section-title" style="text-align: center; margin-bottom: 40px;">Application Interface</h2>
-                <div class="interface-mockup">
-                    <div class="mockup-header">
-                        <h3 style="margin: 0; font-size: 1.2rem;">myFlix Angular Client</h3>
-                        <div class="mockup-nav">
-                            <span>Movies</span>
-                            <span>Profile</span>
-                            <span>Logout</span>
-                        </div>
-                    </div>
-                    <div class="mockup-content">
-                        <h2 style="color: #118ab2; margin-bottom: 30px; font-size: 2rem;">Movie Library</h2>
-                        <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-bottom: 40px; display: flex; align-items: center;">
-                            <input type="text" placeholder="Search movies, directors, genres..." style="border: none; background: none; flex: 1; padding: 5px; font-size: 1rem;">
-                            <span style="color: #118ab2;">🔍</span>
-                        </div>
-                        <div class="movie-grid">
-                            <div class="movie-card">
-                                <div class="movie-poster" style="background: linear-gradient(135deg, #ff6b6b, #ee5a24);">
-                                    Movie Poster<br>
-                                    <small>Director Info</small><br>
-                                    <small>Genre Details</small>
-                                </div>
-                                <p style="margin: 5px 0; font-weight: 600;">Featured Film</p>
-                                <div style="font-size: 0.8rem; color: #64748b;">⭐ Details 🎬 Director 🏷️ Genre</div>
-                            </div>
-                            <div class="movie-card">
-                                <div class="movie-poster" style="background: linear-gradient(135deg, #118ab2, #0d7a94);">
-                                    Angular Material<br>
-                                    <small>Responsive Design</small><br>
-                                    <small>TypeScript</small>
-                                </div>
-                                <p style="margin: 5px 0; font-weight: 600;">Tech Implementation</p>
-                                <div style="font-size: 0.8rem; color: #64748b;">⭐ Modern 🎬 Professional 🏷️ Scalable</div>
-                            </div>
-                            <div class="movie-card">
-                                <div class="movie-poster" style="background: linear-gradient(135deg, #ffd166, #f4c430);">
-                                    User Profiles<br>
-                                    <small>Favorites Management</small><br>
-                                    <small>Authentication</small>
-                                </div>
-                                <p style="margin: 5px 0; font-weight: 600;">Personal Features</p>
-                                <div style="font-size: 0.8rem; color: #64748b;">⭐ Secure 🎬 Intuitive 🏷️ Personal</div>
-                            </div>
-                            <div class="movie-card">
-                                <div class="movie-poster" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6);">
-                                    Documentation<br>
-                                    <small>TypeDoc & JSDoc</small><br>
-                                    <small>Agile Process</small>
-                                </div>
-                                <p style="margin: 5px 0; font-weight: 600;">Professional Standards</p>
-                                <div style="font-size: 0.8rem; color: #64748b;">⭐ Complete 🎬 Detailed 🏷️ Industry-Ready</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Results -->
-    <section class="results">
-        <div class="container">
-            <div class="results-content">
-                <h2 class="section-title">Technical Achievements & Success Metrics</h2>
-                <div class="results-grid">
-                    <div class="result-item">
-                        <div class="result-number">100%</div>
-                        <div class="result-label">Functional Requirements Met</div>
-                    </div>
-                    <div class="result-item">
-                        <div class="result-number">Angular 9+</div>
-                        <div class="result-label">Modern Framework Implementation</div>
-                    </div>
-                    <div class="result-item">
-                        <div class="result-number">TypeDoc</div>
-                        <div class="result-label">Comprehensive Documentation</div>
-                    </div>
-                    <div class="result-item">
-                        <div class="result-number">GitHub Pages</div>
-                        <div class="result-label">Production Deployment</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tech Stack -->
-    <section class="tech-stack">
-        <div class="container">
-            <div class="section">
-                <h2 class="section-title">Technology Stack</h2>
-                <div class="section-content">
-                    <p>Built with modern technologies and professional development tools, integrating with previously developed REST API from Achievement 2.</p>
-                </div>
-                <div class="tech-grid">
-                    <div class="tech-item">
-                        <div class="tech-name">Angular 9+</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-name">Angular Material</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-name">TypeScript</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-name">SCSS</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-name">Node.js</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-name">Express.js</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-name">MongoDB</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-name">GitHub Pages</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-name">TypeDoc</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-name">JSDoc</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Learning Outcomes -->
-    <section class="learning-section">
-        <div class="container">
-            <div class="section">
-                <h2 class="section-title" style="color: #1a202c;">Professional Development & Learning Outcomes</h2>
-                <div class="section-content" style="color: #1a202c;">
-                    <p>This project demonstrates comprehensive technical skills alongside professional development practices essential for real-world development environments.</p>
-                </div>
-                
-                <div class="learning-grid">
-                    <div class="learning-card">
-                        <h3 class="learning-title">Angular Framework Mastery</h3>
-                        <p>Component-based architecture, service integration, dependency injection, routing and navigation management, and Angular Material design system utilization.</p>
-                    </div>
-                    <div class="learning-card">
-                        <h3 class="learning-title">Agile Methodology Implementation</h3>
-                        <p>User story creation, story point estimation, kanban board management, iterative development, and retrospective analysis for continuous improvement.</p>
-                    </div>
-                    <div class="learning-card">
-                        <h3 class="learning-title">Documentation & Communication</h3>
-                        <p>TypeDoc and JSDoc implementation, technical handoff documentation, code commenting best practices, and professional presentation skills.</p>
-                    </div>
-                    <div class="learning-card">
-                        <h3 class="learning-title">Professional Development Practices</h3>
-                        <p>Version control workflows, deployment pipelines, comprehensive testing strategies, and code maintainability standards.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Reflections -->
-    <section class="main-content">
-        <div class="container">
-            <div class="section">
-                <h2 class="section-title">Critical Reflections & Future Enhancements</h2>
-                
-                <div class="section-content">
-                    <p><strong>Most Valuable Learning Experience:</strong> Implementing Agile methodologies throughout development provided insights into how professional development teams organize and execute complex projects. The kanban board tracking revealed areas where initial estimates were accurate and others where complexity was underestimated.</p>
-                    
-                    <p><strong>Technical Growth:</strong> Working with Angular Material taught the value of design systems in creating consistent, professional user interfaces. The framework's component library significantly accelerated development while ensuring accessibility and responsive design.</p>
-                </div>
-
-                <div class="challenge-grid">
-                    <div class="challenge-card">
-                        <h3 class="challenge-title">Early Angular Material Adoption</h3>
-                        <p>Integrating the design system from the beginning prevented inconsistent styling and reduced custom CSS development time significantly.</p>
-                    </div>
-                    <div class="challenge-card">
-                        <h3 class="challenge-title">Comprehensive API Service Layer</h3>
-                        <p>Creating a robust service for backend communication simplified component development and centralized error handling effectively.</p>
-                    </div>
-                    <div class="challenge-card">
-                        <h3 class="challenge-title">Detailed User Flow Planning</h3>
-                        <p>Investing time in navigation design prevented user experience issues and guided routing implementation throughout development.</p>
-                    </div>
-                </div>
-
-                <div class="section-content" style="margin-top: 40px;">
-                    <p><strong>Areas for Future Enhancement:</strong> Enhanced search functionality with advanced filtering, social features including user reviews and ratings, progressive web app capabilities for offline functionality, and performance optimization with lazy loading strategies.</p>
-                    
-                    <p><strong>Professional Impact:</strong> This project demonstrates ability to work within established frameworks while delivering high-quality, well-documented solutions. The combination of technical implementation and professional presentation skills directly translates to value in collaborative development environments.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer CTA -->
-    <section class="footer-cta">
-        <div class="container">
-            <h2 class="cta-title">Experience the Application</h2>
-            <p>Explore the complete myFlix Angular application and technical documentation</p>
-            
-            <div class="cta-links">
-                <a href="#" class="cta-button">Live Demo</a>
-                <a href="#" class="cta-button secondary">GitHub Repository</a>
-                <a href="#" class="cta-button">Kanban Board</a>
-                <a href="#" class="cta-button secondary">Technical Documentation</a>
+    <!-- Main Content - CONSISTENT WITH OTHER PAGES -->
+    <main>
+        <section class="wrapper">
+            <h1>Case Studies</h1>
+            <div class="case-study-intro">
+                <p>Deep dives into my development process, technical challenges, and solutions across web applications built with modern frameworks and best practices. Each case study demonstrates different aspects of full-stack development, from frontend frameworks to real-time communication and API integration.</p>
             </div>
             
-            <div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid #444; font-size: 0.9rem; opacity: 0.8;">
-                <p><strong>Technical Specifications:</strong> Angular 9+, Angular Material, TypeScript, SCSS | Backend: Node.js, Express.js, MongoDB</p>
-                <p><strong>Documentation:</strong> TypeDoc for Angular components, JSDoc for technical specifications, Agile project management with user stories</p>
+            <div class="grid-container">
+                <div class="grid">
+                    <!-- myFlix Angular Case Study -->
+                    <article class="grid_item case-study-card">
+                        <h2>myFlix Angular Client Case Study</h2>
+                        
+                        <!-- Prominent Read Case Study Button -->
+                        <div style="text-align: center; margin: 15px 0;">
+                            <a href="myflix-case-study.html" 
+                               style="background: var(--color-warm-pink); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block; transition: all 0.3s ease; white-space: nowrap;"
+                               onmouseover="this.style.background='var(--color-mauve)'; this.style.transform='translateY(-2px)'"
+                               onmouseout="this.style.background='var(--color-warm-pink)'; this.style.transform='translateY(0)'"
+                               aria-label="Read myFlix Angular Case Study">
+                                Read Full Case Study
+                            </a>
+                        </div>
+                        
+                        <br />
+                        <img
+                            class="project-image"
+                            src="img/CineVault-Angular-client.png"
+                            alt="Screenshot of the myFlix Angular Application"
+                        />
+                        <br />
+                        <p>
+                            Building a modern, responsive movie discovery platform using Angular 9+, demonstrating professional development practices and comprehensive technical documentation for the CareerFoundry Web Development Program. Features user authentication, profile management, and movie database integration.
+                        </p>
+                        <br />
+                        
+                        <div class="case-study-meta">
+                            <div class="meta-row">
+                                <span class="meta-label">Framework:</span>
+                                <span class="meta-value">Angular 9+ with Material Design</span>
+                            </div>
+                            <div class="meta-row">
+                                <span class="meta-label">Duration:</span>
+                                <span class="meta-value">6 weeks (Achievement 6)</span>
+                            </div>
+                            <div class="meta-row">
+                                <span class="meta-label">Type:</span>
+                                <span class="meta-value">Single-page Angular application</span>
+                            </div>
+                        </div>
+                        
+                        <div class="case-study-highlights">
+                            <div class="highlight-tag" style="background: #f8f9fa !important; color: var(--color-deep-purple) !important; transition: none !important; transform: none !important; pointer-events: none !important; border: 1px solid var(--color-mauve) !important;">Angular Material</div>
+                            <div class="highlight-tag" style="background: #f8f9fa !important; color: var(--color-deep-purple) !important; transition: none !important; transform: none !important; pointer-events: none !important; border: 1px solid var(--color-mauve) !important;">TypeScript</div>
+                            <div class="highlight-tag" style="background: #f8f9fa !important; color: var(--color-deep-purple) !important; transition: none !important; transform: none !important; pointer-events: none !important; border: 1px solid var(--color-mauve) !important;">REST API Integration</div>
+                            <div class="highlight-tag" style="background: #f8f9fa !important; color: var(--color-deep-purple) !important; transition: none !important; transform: none !important; pointer-events: none !important; border: 1px solid var(--color-mauve) !important;">Agile Development</div>
+                        </div>
+                        
+                        <div class="button-container">
+                            <p>
+                                <a href="https://chels93.github.io/CineVault-Angular-client/" 
+                                   target="_blank" 
+                                   aria-label="View CineVault Angular App">
+                                    Live Demo
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- 
+                    Chat App Case Study - COMMENTED OUT
+                    <article class="grid_item case-study-card">
+                        <h2>Mobile Chat App</h2>
+                        <div class="case-study-tag">React Native Development Case Study</div>
+                        
+                        <div style="text-align: center; margin: 15px 0;">
+                            <a href="chat-app-case-study.html" 
+                               style="background: var(--color-warm-pink); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block; transition: all 0.3s ease;"
+                               onmouseover="this.style.background='var(--color-mauve)'; this.style.transform='translateY(-2px)'"
+                               onmouseout="this.style.background='var(--color-warm-pink)'; this.style.transform='translateY(0)'"
+                               aria-label="Read Mobile Chat App Case Study">
+                                Read Full Case Study
+                            </a>
+                        </div>
+                        
+                        <br />
+                        <img
+                            class="project-image"
+                            src="img/chat-appScreenshot.png"
+                            alt="Screenshot of the React Native Mobile Chat Application"
+                        />
+                        <br />
+                        <p>
+                            A real-time mobile chat application built with React Native and Firebase, featuring offline messaging, image sharing, and location services. Demonstrates cross-platform mobile development with real-time data synchronization and accessibility features.
+                        </p>
+                        <br />
+                        
+                        <div class="case-study-meta">
+                            <div class="meta-row">
+                                <span class="meta-label">Framework:</span>
+                                <span class="meta-value">React Native with Firebase</span>
+                            </div>
+                            <div class="meta-row">
+                                <span class="meta-label">Duration:</span>
+                                <span class="meta-value">4 weeks (Achievement 5)</span>
+                            </div>
+                            <div class="meta-row">
+                                <span class="meta-label">Type:</span>
+                                <span class="meta-value">Cross-platform mobile application</span>
+                            </div>
+                        </div>
+                        
+                        <div class="case-study-highlights">
+                            <div class="highlight-tag" style="background: #f8f9fa !important; color: var(--color-deep-purple) !important; transition: none !important; transform: none !important; pointer-events: none !important; border: 1px solid var(--color-mauve) !important;">Firebase Firestore</div>
+                            <div class="highlight-tag" style="background: #f8f9fa !important; color: var(--color-deep-purple) !important; transition: none !important; transform: none !important; pointer-events: none !important; border: 1px solid var(--color-mauve) !important;">Real-time Messaging</div>
+                            <div class="highlight-tag" style="background: #f8f9fa !important; color: var(--color-deep-purple) !important; transition: none !important; transform: none !important; pointer-events: none !important; border: 1px solid var(--color-mauve) !important;">Offline Storage</div>
+                            <div class="highlight-tag" style="background: #f8f9fa !important; color: var(--color-deep-purple) !important; transition: none !important; transform: none !important; pointer-events: none !important; border: 1px solid var(--color-mauve) !important;">Accessibility</div>
+                        </div>
+                        
+                        <div class="button-container">
+                            <p>
+                                <a href="https://github.com/Chels93/chat-app" 
+                                   target="_blank" 
+                                   aria-label="View React Native Mobile Chat App Project on GitHub">
+                                    GitHub Repository
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+                    -->
+
+                    <!-- 
+                    Meet App Case Study - COMMENTED OUT
+                    <article class="grid_item case-study-card">
+                        <h2>Meet App</h2>
+                        <div class="case-study-tag">React PWA Development Case Study</div>
+                        
+                        <div style="text-align: center; margin: 15px 0;">
+                            <a href="meet-app-case-study.html" 
+                               style="background: var(--color-warm-pink); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block; transition: all 0.3s ease;"
+                               onmouseover="this.style.background='var(--color-mauve)'; this.style.transform='translateY(-2px)'"
+                               onmouseout="this.style.background='var(--color-warm-pink)'; this.style.transform='translateY(0)'"
+                               aria-label="Read Meet App Case Study">
+                                Read Full Case Study
+                            </a>
+                        </div>
+                        
+                        <br />
+                        <img
+                            class="project-image"
+                            src="img/MeetAppScreenshot.png"
+                            alt="Screenshot of the Meet App"
+                        />
+                        <br />
+                        <p>
+                            A serverless, progressive web application (PWA) built with React using test-driven development (TDD). It integrates with the Google Calendar API to fetch upcoming events and utilizes AWS Lambda for serverless functions. Demonstrates modern web development practices with PWA features.
+                        </p>
+                        <br />
+                        
+                        <div class="case-study-meta">
+                            <div class="meta-row">
+                                <span class="meta-label">Framework:</span>
+                                <span class="meta-value">React with PWA Features</span>
+                            </div>
+                            <div class="meta-row">
+                                <span class="meta-label">Duration:</span>
+                                <span class="meta-value">4 weeks (Achievement 4)</span>
+                            </div>
+                            <div class="meta-row">
+                                <span class="meta-label">Type:</span>
+                                <span class="meta-value">Progressive Web Application</span>
+                            </div>
+                        </div>
+                        
+                        <div class="case-study-highlights">
+                            <div class="highlight-tag" style="background: #f8f9fa !important; color: var(--color-deep-purple) !important; transition: none !important; transform: none !important; pointer-events: none !important; border: 1px solid var(--color-mauve) !important;">Google Calendar API</div>
+                            <div class="highlight-tag" style="background: #f8f9fa !important; color: var(--color-deep-purple) !important; transition: none !important; transform: none !important; pointer-events: none !important; border: 1px solid var(--color-mauve) !important;">Test-Driven Development</div>
+                            <div class="highlight-tag" style="background: #f8f9fa !important; color: var(--color-deep-purple) !important; transition: none !important; transform: none !important; pointer-events: none !important; border: 1px solid var(--color-mauve) !important;">AWS Lambda</div>
+                            <div class="highlight-tag" style="background: #f8f9fa !important; color: var(--color-deep-purple) !important; transition: none !important; transform: none !important; pointer-events: none !important; border: 1px solid var(--color-mauve) !important;">PWA Features</div>
+                        </div>
+                        
+                        <div class="button-container">
+                            <p>
+                                <a href="https://chels93.github.io/meet/" 
+                                   target="_blank" 
+                                   aria-label="View Meet App">
+                                    Live Demo
+                                </a>
+                            </p>
+                        </div>
+                    </article>
+                    -->
+                </div>
             </div>
+        </section>
+    </main>
+
+    <!-- EXACT SAME FOOTER AS OTHER PAGES -->
+    <footer class="page-footer">
+        <div class="social-media">
+            <a
+                href="https://medium.com/@cacguff/subscribe"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img src="img/Medium-Icon-Black.svg" alt="Medium" />
+            </a>
+            <a
+                href="https://github.com/Chels93"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img src="img/github-mark.png" alt="Github" />
+            </a>
+            <a
+                href="https://www.linkedin.com/in/chelseaguffogg/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img src="img/LinkedIn.png" alt="LinkedIn" />
+            </a>
         </div>
-    </section>
+    </footer>
+    
+    <!-- SAME SCRIPT AS OTHER PAGES -->
+    <script src="js/menu-toggle.js"></script>
 </body>
 </html>

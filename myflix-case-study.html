@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="myFlix Angular Client Case Study - Chelsea Guffogg's comprehensive development process, technical implementation, and professional methodologies for building a modern movie discovery platform."
+    />
+    <title>myFlix Angular Client - Complete Case Study | Chelsea Guffogg</title>
+    
+    <!-- Font and CSS links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="css/style.production.css" />
+    
+    <!-- Enhanced case study styles -->
+    <style>
+        /* Color variables for consistency */
+        :root {
+            --color-rich-burgundy: #8b2635;
+            --color-wine: #a0313c;
+            --color-deep-rose: #c44357;
+            --color-warm-pink: #e8a4b8;
+            --color-mauve: #947582;
+        }
+
+        /* Portfolio-aligned case study styling with rich burgundy accents */
+        .case-study-hero {
+            background: linear-gradient(135deg, var(--color-warm-pink) 0%, var(--color-mauve) 100%) !important;
+            padding: 80px 20px;
+        }
+        
+        /* Hero content styling - title and subtitle stay white */
+        .hero-content h1 {
+            color: white !important;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .hero-subtitle {
+            color: white !important;
+            font-size: 1.3rem;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Meta badges - burgundy text, no white containers */
+        .hero-meta {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .meta-badges {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .meta-badge {
+            color: var(--color-rich-burgundy) !important;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 8px 0;
+        }
+        
+        /* Key highlights - burgundy text, forced single row */
+        .key-highlights {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+            flex-wrap: nowrap;
+        }
+        
+        .highlight-item {
+            text-align: center;
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .highlight-label {
+            color: var(--color-rich-burgundy) !important;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .highlight-value {
+            color: var(--color-rich-burgundy) !important;
+            font-size: 1.1rem;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        /* Stats section - burgundy text, no white containers */
+        .case-study-stats {
+            background: linear-gradient(135deg, var(--color-warm-pink) 0%, var(--color-mauve) 100%);
+            padding: 60px 20px;
+            border-top: 1px solid rgba(139, 38, 53, 0.2);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            color: var(--color-rich-burgundy) !important;
+            font-size: 3rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            color: var(--color-rich-burgundy) !important;
+            font-size: 1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Enhanced case study results section - easier on the eyes */
+        .case-study-results {
+            background: linear-gradient(135deg, #faf9f6 0%, #f5f3f0 100%) !important;
+            border-top: 1px solid var(--color-deep-rose);
+            border-bottom: 1px solid var(--color-deep-rose);
+            padding: 80px 20px;
+        }
+        
+        .case-study-results .section-title {
+            color: var(--color-rich-burgundy) !important;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .result-item {
+            background: white !important;
+            padding: 30px 20px !important;
+            border-radius: 16px !important;
+            box-shadow: 0 6px 20px rgba(139, 38, 53, 0.08) !important;
+            transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+            border: 1px solid rgba(139, 38, 53, 0.1) !important;
+        }
+        
+        .result-item:hover {
+            transform: translateY(-5px) !important;
+            box-shadow: 0 10px 30px rgba(139, 38, 53, 0.15) !important;
+        }
+        
+        .results-grid .result-item .result-number {
+            color: var(--color-wine) !important;
+            font-size: 2.8rem !important;
+            margin-bottom: 12px !important;
+        }
+        
+        .result-label {
+            color: var(--color-mauve) !important;
+            font-weight: 500 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.5px !important;
+        }
+        
+        .case-study-results .section-content {
+            background: white !important;
+            padding: 30px !important;
+            border-radius: 16px !important;
+            box-shadow: 0 6px 20px rgba(139, 38, 53, 0.08) !important;
+            margin-top: 40px !important;
+            text-align: center !important;
+            border: 1px solid rgba(139, 38, 53, 0.1) !important;
+        }
+        
+        .case-study-results .section-content p {
+            color: var(--color-mauve) !important;
+            font-size: 1.1rem !important;
+            line-height: 1.7 !important;
+            margin: 0 !important;
+            font-weight: 500 !important;
+        }
+        
+        /* Enhanced CTA section */
+        .case-study-cta {
+            background: linear-gradient(135deg, var(--color-rich-burgundy), var(--color-wine)) !important;
+            position: relative;
+        }
+        
+        .case-study-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.05);
+            pointer-events: none;
+        }
+        
+        .case-study-cta .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .cta-title {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+        }
+        
+        .case-study-cta p {
+            max-width: 600px !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+        
+        .cta-links .button {
+            padding: 16px 32px !important;
+            background: rgba(255, 255, 255, 0.9) !important;
+            color: var(--color-rich-burgundy) !important;
+            border-radius: 12px !important;
+            border: 2px solid rgba(255, 255, 255, 0.9) !important;
+            margin: 8px !important;
+            backdrop-filter: blur(10px) !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+        }
+        
+        .cta-links .button:hover {
+            background: transparent !important;
+            color: white !important;
+            border-color: white !important;
+            transform: translateY(-3px) !important;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2) !important;
+        }
+        
+        .case-study-cta .tech-spec {
+            background: rgba(255, 255, 255, 0.1) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            backdrop-filter: blur(10px) !important;
+        }
+        
+        .case-study-cta .tech-spec h4 {
+            color: white !important;
+        }
+        
+        .case-study-cta .tech-item {
+            background: rgba(255, 255, 255, 0.15) !important;
+            color: white !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        }
+        
+        .phase-header {
+            background: linear-gradient(135deg, var(--color-deep-rose), var(--color-wine)) !important;
+        }
+        
+        /* Enhanced typography for readability */
+        .section-content {
+            color: var(--color-mauve) !important;
+            line-height: 1.8;
+        }
+        
+        .section-content strong {
+            color: var(--color-rich-burgundy) !important;
+        }
+        
+        /* Key insights styling */
+        .key-insight {
+            background: linear-gradient(135deg, rgba(139, 38, 53, 0.08), rgba(160, 49, 60, 0.08));
+            border-left: 4px solid var(--color-rich-burgundy);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .key-insight h4 {
+            color: var(--color-rich-burgundy);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        /* Process timeline styling */
+        .timeline {
+            position: relative;
+            margin: 40px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--color-wine);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            padding-left: 80px;
+        }
+        
+        .timeline-marker {
+            position: absolute;
+            left: 20px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: var(--color-wine);
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 2px 8px rgba(139, 38, 53, 0.2);
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-left: 3px solid var(--color-deep-rose);
+        }
+        
+        /* Technical specifications */
+        .tech-spec {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        
+        .tech-spec h4 {
+            color: var(--color-rich-burgundy);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .tech-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .tech-item {
+            background: linear-gradient(135deg, var(--color-deep-rose), var(--color-wine));
+            color: white;
+            padding: 10px 15px;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        /* Screenshot placeholder styling - always solid burgundy border */
+        .screenshot-placeholder {
+            background: rgba(196, 67, 87, 0.05);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            margin: 25px 0;
+            border: 2px solid var(--color-wine);
+            transition: all 0.3s ease;
+        }
+        
+        .screenshot-placeholder:hover {
+            background: rgba(196, 67, 87, 0.08);
+            border: 2px solid var(--color-wine);
+        }
+        
+        .screenshot-placeholder img {
+            border: 2px solid var(--color-wine) !important;
+        }
+        
+        .screenshot-placeholder img:hover {
+            border: 2px solid var(--color-wine) !important;
+        }
+        
+        /* Metrics and statistics */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .metric-item {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-top: 3px solid var(--color-wine);
+        }
+        
+        .metric-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--color-wine);
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .metric-label {
+            font-size: 0.9rem;
+            color: var(--color-mauve);
+            font-weight: 500;
+        }
+        
+        /* Learning outcomes styling */
+        .learning-outcome {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid var(--color-deep-rose);
+        }
+        
+        .learning-outcome h5 {
+            color: var(--color-rich-burgundy);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        /* Container for consistent spacing */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Enhanced responsive design with industry standards */
+        @media (max-width: 1200px) {
+            .container {
+                padding: 0 30px;
+            }
+            
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .key-highlights {
+                gap: 30px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.15rem;
+                max-width: 90%;
+            }
+            
+            .key-highlights {
+                gap: 25px;
+            }
+            
+            .highlight-value {
+                font-size: 1rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 35px;
+            }
+            
+            .phase-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+            
+            .challenge-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .results-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+                line-height: 1.2;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+                margin-bottom: 30px;
+                max-width: 95%;
+            }
+            
+            .case-study-hero {
+                padding: 60px 20px;
+            }
+            
+            .case-study-stats {
+                padding: 50px 20px;
+            }
+            
+            .key-highlights {
+                gap: 20px;
+                margin-top: 25px;
+            }
+            
+            .highlight-label {
+                font-size: 0.85rem;
+                margin-bottom: 6px;
+            }
+            
+            .highlight-value {
+                font-size: 0.95rem;
+                line-height: 1.3;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+            
+            .stat-label {
+                font-size: 0.9rem;
+            }
+            
+            .timeline {
+                margin: 20px 0;
+            }
+            
+            .timeline::before {
+                left: 15px;
+            }
+            
+            .timeline-item {
+                padding-left: 50px;
+            }
+            
+            .timeline-marker {
+                left: 5px;
+                width: 15px;
+                height: 15px;
+            }
+            
+            .tech-list {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+            
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .cta-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .cta-links .button {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+            
+            .results-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .section {
+                margin-bottom: 40px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+                margin-bottom: 20px;
+            }
+            
+            .phase-content {
+                padding: 20px;
+            }
+            
+            .screenshot-placeholder {
+                padding: 20px;
+                margin: 20px 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 16px;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.2rem;
+                line-height: 1.1;
+                margin-bottom: 15px;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+                line-height: 1.5;
+                margin-bottom: 25px;
+            }
+            
+            .case-study-hero {
+                padding: 50px 16px;
+            }
+            
+            .case-study-stats {
+                padding: 40px 16px;
+            }
+            
+            .key-highlights {
+                gap: 15px;
+                margin-top: 20px;
+            }
+            
+            .highlight-item {
+                min-width: 0;
+                flex: 1;
+            }
+            
+            .highlight-label {
+                font-size: 0.75rem;
+                margin-bottom: 4px;
+            }
+            
+            .highlight-value {
+                font-size: 0.85rem;
+                line-height: 1.2;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                max-width: 300px;
+            }
+            
+            .stat-number {
+                font-size: 2.2rem;
+            }
+            
+            .stat-label {
+                font-size: 0.85rem;
+            }
+            
+            .tech-list {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            .metrics-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .timeline-item {
+                padding-left: 40px;
+            }
+            
+            .timeline-marker {
+                left: 2px;
+                width: 12px;
+                height: 12px;
+            }
+            
+            .timeline::before {
+                left: 8px;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .cta-links .button {
+                padding: 14px 24px;
+                font-size: 0.9rem;
+            }
+            
+            .tech-item {
+                padding: 8px 12px;
+                font-size: 0.85rem;
+            }
+            
+            .metric-number {
+                font-size: 1.8rem;
+            }
+            
+            .metric-label {
+                font-size: 0.8rem;
+            }
+            
+            .result-item {
+                padding: 25px 15px;
+            }
+            
+            .results-grid .result-item .result-number {
+                font-size: 2.2rem;
+            }
+            
+            .result-label {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 0.95rem;
+            }
+            
+            .key-highlights {
+                gap: 12px;
+            }
+            
+            .highlight-value {
+                font-size: 0.8rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Touch-friendly improvements for mobile */
+        @media (hover: none) and (pointer: coarse) {
+            .button {
+                min-height: 44px;
+                padding: 12px 24px;
+            }
+            
+            .cta-links .button {
+                min-height: 48px;
+                padding: 16px 32px;
+            }
+            
+            .result-item:hover {
+                transform: none;
+            }
+            
+            .screenshot-placeholder:hover {
+                background: rgba(196, 67, 87, 0.05);
+            }
+        }
+        
+        /* High DPI screen support */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .hero-content h1 {
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="page-header">
+        <img
+            class="page-header-img"
+            src="img/PersonalLogo.png"
+            alt="Chelsea Guffogg's personal logo"
+        />
+        <nav class="navigation" role="navigation">
+            <ul class="navigation-list">
+                <li><a href="index.html" class="navigation-list_item">Home</a></li>
+                <li><a href="about.html" class="navigation-list_item">About</a></li>
+                <li><a href="projects.html" class="navigation-list_item">Projects</a></li>
+                <li><a href="case-studies.html" class="navigation-list_item">Case Studies</a></li>
+                <li><a href="contact.html" class="navigation-list_item">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="case-study">
+        <!-- Redesigned Hero Section - No White Containers -->
+        <section class="case-study-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>myFlix Angular Client Case Study</h1>
+                    <p class="hero-subtitle">A comprehensive movie discovery platform showcasing modern Angular development practices, professional documentation, and full-stack integration capabilities.</p>
+                    
+                    <div class="hero-meta">
+                        <div class="key-highlights">
+                            <div class="highlight-item">
+                                <span class="highlight-label">Role</span>
+                                <span class="highlight-value">Frontend Developer & Technical Lead</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-label">Focus</span>
+                                <span class="highlight-value">Angular SPA with REST API Integration</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-label">Technologies</span>
+                                <span class="highlight-value">Angular 9+, TypeScript, Angular Material, SCSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Overview Stats - No White Containers -->
+        <section class="case-study-stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">6</div>
+                        <div class="stat-label">Weeks Development</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">7</div>
+                        <div class="stat-label">Angular Components</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Requirements Met</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">User Stories Completed</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Case Study Content -->
+        <section class="case-study-content">
+            <div class="container">
+                
+                <!-- Executive Summary -->
+                <div class="section">
+                    <h2 class="section-title">Executive Summary</h2>
+                    <div class="section-content">
+                        <p><strong>The Challenge:</strong> How can movie enthusiasts easily access comprehensive information about films, directors, and genres while maintaining personalized profiles to save their favorite movies?</p>
+                        
+                        <p>As part of the CareerFoundry Web Development program, I was tasked with building a modern, responsive frontend for the myFlix application using Angular. This project required creating an intuitive client-side interface that would effectively communicate with my previously built REST API while demonstrating proficiency in Angular development, Agile project management, and technical documentation.</p>
+                        
+                        <div class="key-insight">
+                            <h4>Key Success Metrics</h4>
+                            <p>Delivered a fully functional Angular application that meets all technical requirements while demonstrating best practices in documentation, user experience design, and Agile development methodologies. The project showcases professional-level development practices suitable for real-world tech industry environments.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problem Statement & Goals -->
+                <div class="section">
+                    <h2 class="section-title">Problem Statement & Project Goals</h2>
+                    <div class="section-content">
+                        <div class="challenge-grid">
+                            <div class="challenge-card">
+                                <h3 class="challenge-title">Information Access Challenge</h3>
+                                <p>Movie enthusiasts need a modern, accessible platform to discover detailed information about movies, directors, and genres without navigating multiple disparate sources.</p>
+                            </div>
+                            <div class="challenge-card">
+                                <h3 class="challenge-title">Personal Management Need</h3>
+                                <p>Users require the ability to create and manage personal profiles with favorite movie collections, enabling personalized movie discovery experiences.</p>
+                            </div>
+                            <div class="challenge-card">
+                                <h3 class="challenge-title">Technical Integration Requirement</h3>
+                                <p>Building a responsive Angular frontend that effectively communicates with existing REST API architecture while maintaining professional development standards.</p>
+                            </div>
+                        </div>
+
+                        <div class="tech-spec">
+                            <h4>Technical Requirements</h4>
+                            <div class="tech-list">
+                                <div class="tech-item">Angular 9+</div>
+                                <div class="tech-item">Angular Material</div>
+                                <div class="tech-item">TypeScript</div>
+                                <div class="tech-item">SCSS Styling</div>
+                                <div class="tech-item">GitHub Pages</div>
+                                <div class="tech-item">REST API Integration</div>
+                                <div class="tech-item">Responsive Design</div>
+                                <div class="tech-item">TypeDoc Documentation</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Development Process & Methodology -->
+                <div class="section">
+                    <h2 class="section-title">Development Process & Agile Methodology</h2>
+                    <div class="section-content">
+                        <p>Before writing any code, I established a comprehensive project management approach using Agile principles, demonstrating professional development practices that mirror real-world tech industry workflows.</p>
+                        
+                        <div class="screenshot-placeholder">
+                            <p>Kanban Board Implementation showing user stories, story points, and project progress tracking</p>
+                        </div>
+
+                        <div class="key-insight">
+                            <h4>Agile Implementation Strategy</h4>
+                            <p>Working with a kanban board throughout development provided valuable insights into professional project management practices used in the tech industry, including user story creation, story point estimation, and iterative development cycles.</p>
+                        </div>
+
+                        <h3>User Stories & Requirements</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h4>User Story 1: Movie Information Access</h4>
+                                    <p><em>"As a user, I want to be able to receive information on movies, directors, and genres so that I can learn more about movies I've watched or am interested in."</em></p>
+                                    <p><strong>Story Points:</strong> 8 | <strong>Complexity:</strong> High</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h4>User Story 2: Movie Browsing</h4>
+                                    <p><em>"As a user, I want to view a list of all available movies so that I can browse and choose a movie to learn more about."</em></p>
+                                    <p><strong>Story Points:</strong> 13 | <strong>Complexity:</strong> Very High (responsive design, search functionality)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h4>User Story 3: Profile Management</h4>
+                                    <p><em>"As a user, I want to be able to create a profile so I can save data about my favorite movies."</em></p>
+                                    <p><strong>Story Points:</strong> 5 | <strong>Complexity:</strong> Medium</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Implementation Deep Dive -->
+                <div class="section">
+                    <h2 class="section-title">Technical Implementation Journey</h2>
+                    
+                    <div class="phase-grid">
+                        <!-- Phase 1: Project Setup -->
+                        <div class="phase-card">
+                            <div class="phase-header">
+                                <h3 class="phase-title">Phase 1: Angular Foundation & Architecture</h3>
+                                <p class="phase-subtitle">Professional development environment setup</p>
+                            </div>
+                            <div class="phase-content">
+                                <p>Using Angular CLI, I generated the initial project structure following Angular best practices, ensuring scalability and maintainability for future development.</p>
+                                
+                                <div class="code-block">
+<span class="code-comment">// Angular CLI Implementation Strategy</span>
+<span class="code-keyword">ng new</span> myflix-angular-client --routing --style=scss
+<span class="code-keyword">ng generate component</span> welcome-page
+<span class="code-keyword">ng generate component</span> user-registration  
+<span class="code-keyword">ng generate component</span> user-login
+<span class="code-keyword">ng generate component</span> movie-card
+<span class="code-keyword">ng generate component</span> user-profile
+<span class="code-keyword">ng generate service</span> fetch-api-data
+                                </div>
+                                
+                                <div class="phase-highlights">
+                                    <div class="highlight-item">
+                                        <div class="highlight-title">Component Architecture</div>
+                                        <p>Implemented modular component structure for maximum reusability and maintainability across the application</p>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <div class="highlight-title">Service Layer Design</div>
+                                        <p>Created centralized API communication through dedicated services, following Angular dependency injection patterns</p>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <div class="highlight-title">Routing Strategy</div>
+                                        <p>Designed single-page application architecture with dynamic routing between views for optimal user experience</p>
+                                    </div>
+                                </div>
+
+                                <div class="screenshot-placeholder">
+                                    <p>Project Structure Diagram showing Angular CLI-generated files and custom component organization</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Phase 2: Authentication System -->
+                        <div class="phase-card">
+                            <div class="phase-header">
+                                <h3 class="phase-title">Phase 2: User Authentication & Angular Material</h3>
+                                <p class="phase-subtitle">Professional user interface implementation</p>
+                            </div>
+                            <div class="phase-content">
+                                <p>Implementation of user registration and login forms using Angular Material, creating both visually appealing and functionally robust interfaces with comprehensive validation and error handling.</p>
+                                
+                                <div class="screenshot-placeholder">
+                                    <p>Side-by-side registration and login forms with Angular Material styling</p>
+                                </div>
+
+                                <div class="phase-highlights">
+                                    <div class="highlight-item">
+                                        <div class="highlight-title">Form Validation Strategy</div>
+                                        <p>Implemented real-time validation with clear user feedback, including username, password, email, and date of birth field validation</p>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <div class="highlight-title">Material Design Integration</div>
+                                        <p>Utilized Angular Material's component library for cards, form fields, buttons, and navigation elements following Google's Material Design principles</p>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <div class="highlight-title">Responsive Authentication</div>
+                                        <p>Mobile-first approach ensuring authentication processes work seamlessly across all device types and screen sizes</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Phase 3: Core Features -->
+                        <div class="phase-card">
+                            <div class="phase-header">
+                                <h3 class="phase-title">Phase 3: Movie Discovery Interface</h3>
+                                <p class="phase-subtitle">Core application functionality development</p>
+                            </div>
+                            <div class="phase-content">
+                                <p>The movie card component became the foundation of the user experience, displaying essential movie information in an accessible, visually appealing format while handling various data types and maintaining responsive design principles.</p>
+                                
+                                <div class="screenshot-placeholder">
+                                    <p>Movie Catalog Interface showing grid layout with movie cards containing poster images, titles, and descriptions</p>
+                                </div>
+
+                                <div class="code-block">
+<span class="code-comment">// Angular Routing Configuration</span>
+<span class="code-keyword">const</span> routes: Routes = [
+  { path: <span class="code-string">'welcome'</span>, component: WelcomePageComponent },
+  { path: <span class="code-string">'movies'</span>, component: MovieCardComponent },
+  { path: <span class="code-string">'profile'</span>, component: UserProfileComponent },
+  { path: <span class="code-string">'register'</span>, component: UserRegistrationComponent },
+  { path: <span class="code-string">'login'</span>, component: UserLoginComponent },
+  { path: <span class="code-string">''</span>, redirectTo: <span class="code-string">'welcome'</span>, pathMatch: <span class="code-string">'full'</span> }
+];
+                                </div>
+
+                                <div class="metrics-grid">
+                                    <div class="metric-item">
+                                        <span class="metric-number">7</span>
+                                        <span class="metric-label">Components</span>
+                                    </div>
+                                    <div class="metric-item">
+                                        <span class="metric-number">6</span>
+                                        <span class="metric-label">Routes</span>
+                                    </div>
+                                    <div class="metric-item">
+                                        <span class="metric-number">3</span>
+                                        <span class="metric-label">Services</span>
+                                    </div>
+                                    <div class="metric-item">
+                                        <span class="metric-number">100%</span>
+                                        <span class="metric-label">Responsive</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Phase 4: Advanced Features -->
+                        <div class="phase-card">
+                            <div class="phase-header">
+                                <h3 class="phase-title">Phase 4: Advanced Features & Profile Management</h3>
+                                <p class="phase-subtitle">Personalization and detailed movie information</p>
+                            </div>
+                            <div class="phase-content">
+                                <p>Implementation of advanced user profile functionality and detailed movie information views, including director and genre exploration capabilities that enhance the educational aspect of movie discovery.</p>
+                                
+                                <div class="screenshot-placeholder">
+                                    <p>User Profile Interface showing profile management with favorite movies and account settings</p>
+                                </div>
+
+                                <div class="phase-highlights">
+                                    <div class="highlight-item">
+                                        <div class="highlight-title">Profile Functionality</div>
+                                        <p>Complete account management including information updates, favorites management, and secure account deregistration options</p>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <div class="highlight-title">Director & Genre Views</div>
+                                        <p>Dedicated information screens with biographical details, filmographies, and genre-specific movie recommendations</p>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <div class="highlight-title">Data Synchronization</div>
+                                        <p>Implemented optimistic UI updates with robust error handling to ensure data integrity between frontend and backend</p>
+                                    </div>
+                                </div>
+
+                                <div class="screenshot-placeholder">
+                                    <p>Director and Genre Views showing specialized information screens with detailed director biographies and genre characteristics</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Core Application Features -->
+                <div class="section">
+                    <h2 class="section-title">Core Application Features</h2>
+                    <div class="section-content">
+                        <p>The myFlix Angular application successfully addresses all project requirements while demonstrating professional development practices and modern web application architecture.</p>
+                    </div>
+                    
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">🎬</div>
+                            <h3 class="feature-title">Welcome & Authentication</h3>
+                            <p>Seamless user registration and login functionality with Angular Material forms, comprehensive validation, and clear error messaging for optimal user experience.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">📚</div>
+                            <h3 class="feature-title">Movie Catalog Browser</h3>
+                            <p>Comprehensive movie browsing interface with responsive grid design, intuitive card-based layout, and optimized loading for smooth movie discovery.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🔍</div>
+                            <h3 class="feature-title">Detailed Movie Information</h3>
+                            <p>Rich movie detail views with comprehensive information, seamless navigation to director and genre views, plus integrated favorites management functionality.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">👤</div>
+                            <h3 class="feature-title">Profile Management System</h3>
+                            <p>Complete user account management with secure authentication, profile editing capabilities, favorites collection management, and account deletion options.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🎭</div>
+                            <h3 class="feature-title">Director Discovery</h3>
+                            <p>Dedicated director information screens featuring biographical details, complete filmographies, and enhanced movie discovery through director-based exploration.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🏷️</div>
+                            <h3 class="feature-title">Genre Exploration</h3>
+                            <p>Genre-specific detail pages with comprehensive descriptions, characteristics, and curated movie recommendations for targeted content discovery experiences.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Development & Learning -->
+                <div class="section">
+                    <h2 class="section-title">Professional Development & Learning Outcomes</h2>
+                    <div class="section-content">
+                        <p>This project provided comprehensive exposure to professional web development practices, from initial planning through deployment and documentation. The learning outcomes directly translate to skills valued in the tech industry.</p>
+
+                        <div class="learning-outcome">
+                            <h5>Angular Framework Mastery</h5>
+                            <p>Gained deep understanding of component-based architecture, service integration, dependency injection, routing management, and Angular Material design system implementation.</p>
+                        </div>
+
+                        <div class="learning-outcome">
+                            <h5>Agile Project Management</h5>
+                            <p>Implemented kanban board methodology with user story creation, story point estimation, iterative development cycles, and retrospective analysis for continuous improvement.</p>
+                        </div>
+
+                        <div class="learning-outcome">
+                            <h5>Technical Documentation Standards</h5>
+                            <p>Created comprehensive TypeDoc documentation, technical handoff materials, and user guides that enable knowledge transfer and long-term maintainability.</p>
+                        </div>
+
+                        <div class="learning-outcome">
+                            <h5>Professional Communication</h5>
+                            <p>Developed skills in technical writing, code commenting, and project presentation that are essential for collaborative development environments.</p>
+                        </div>
+
+                        <div class="key-insight">
+                            <h4>Most Valuable Learning Experience</h4>
+                            <p>Implementing Agile methodologies throughout development provided insights into how professional development teams organize and execute complex projects. The kanban board tracking revealed areas where initial estimates were accurate and others where complexity was underestimated, improving future project planning accuracy.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Challenges & Solutions -->
+                <div class="section">
+                    <h2 class="section-title">Technical Challenges & Solutions</h2>
+                    <div class="section-content">
+                        <div class="challenge-grid">
+                            <div class="challenge-card">
+                                <h3 class="challenge-title">API Integration Complexity</h3>
+                                <p><strong>Challenge:</strong> Seamlessly connecting Angular frontend with existing REST API while handling authentication, error states, and data synchronization.</p>
+                                <p><strong>Solution:</strong> Created robust service layer with centralized error handling, token management, and optimistic UI updates for smooth user experience.</p>
+                            </div>
+                            <div class="challenge-card">
+                                <h3 class="challenge-title">Responsive Design Requirements</h3>
+                                <p><strong>Challenge:</strong> Ensuring optimal user experience across all device types while maintaining Angular Material design consistency.</p>
+                                <p><strong>Solution:</strong> Implemented mobile-first responsive design with CSS Grid, Flexbox, and Angular Material's responsive utilities for consistent cross-device functionality.</p>
+                            </div>
+                            <div class="challenge-card">
+                                <h3 class="challenge-title">State Management & Data Flow</h3>
+                                <p><strong>Challenge:</strong> Managing user authentication state, favorites data, and movie information across multiple components effectively.</p>
+                                <p><strong>Solution:</strong> Utilized Angular services with RxJS observables for reactive data flow and consistent state management throughout the application.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Documentation & Deployment -->
+                <div class="section">
+                    <h2 class="section-title">Documentation & Deployment Strategy</h2>
+                    <div class="section-content">
+                        <p>Comprehensive documentation and professional deployment practices were integral to demonstrating industry-standard development workflows.</p>
+
+                        <div class="tech-spec">
+                            <h4>Documentation Deliverables</h4>
+                            <ul>
+                                <li><strong>TypeDoc Component Documentation:</strong> Comprehensive API documentation for all Angular components with detailed parameter and method descriptions</li>
+                                <li><strong>Technical Handoff Documentation:</strong> Complete development guide for future maintainers including setup instructions and architecture decisions</li>
+                                <li><strong>User Flow Diagrams:</strong> Visual documentation of application navigation and user interaction patterns</li>
+                                <li><strong>Kanban Board Analysis:</strong> Project retrospective with completed user stories and development insights</li>
+                            </ul>
+                        </div>
+
+                        <div class="key-insight">
+                            <h4>Deployment Achievement</h4>
+                            <p>Successfully deployed to GitHub Pages with optimized production build, proper routing configuration for single-page applications, and environment-specific API endpoint management. The deployment process required specific configuration for Angular applications on static hosting platforms.</p>
+                        </div>
+
+                        <div class="screenshot-placeholder">
+                            <p>Technical Documentation Examples showing TypeDoc-generated component documentation and developer handoff materials</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Future Enhancements & Reflection -->
+                <div class="section">
+                    <h2 class="section-title">Project Reflection & Future Enhancements</h2>
+                    <div class="section-content">
+                        <div class="key-insight">
+                            <h4>Critical Success Factors</h4>
+                            <p>Early adoption of Angular Material provided consistent design system implementation, comprehensive API service layer simplified component development, and detailed user flow planning prevented navigation issues throughout development.</p>
+                        </div>
+
+                        <h3>Identified Enhancement Opportunities</h3>
+                        <div class="phase-highlights">
+                            <div class="highlight-item">
+                                <div class="highlight-title">Enhanced Search Functionality</div>
+                                <p>Implementation of advanced search and filtering capabilities would improve movie discovery for users with specific genre, director, or year preferences</p>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-title">Social Features Integration</div>
+                                <p>Adding user reviews, ratings, and recommendation sharing would create a more engaging community-driven movie discovery experience</p>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-title">Progressive Web App Features</div>
+                                <p>Implementing offline functionality, push notifications, and app installation options would enhance mobile user engagement and accessibility</p>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-title">Performance Optimization</div>
+                                <p>Adding lazy loading, advanced caching strategies, and image optimization would improve application performance as the movie database grows</p>
+                            </div>
+                        </div>
+
+                        <div class="learning-outcome">
+                            <h5>Professional Impact Assessment</h5>
+                            <p>This project demonstrates ability to work within established frameworks and requirements while delivering high-quality, well-documented solutions. The combination of technical implementation and professional presentation skills shown directly translates to value in collaborative development environments and showcases readiness for real-world development challenges.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results & Achievements -->
+        <section class="case-study-results">
+            <div class="container">
+                <h2 class="section-title">Technical Achievements & Success Metrics</h2>
+                <div class="results-grid">
+                    <div class="result-item">
+                        <div class="result-number">100%</div>
+                        <div class="result-label">Functional Requirements Met</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-number">Angular 9+</div>
+                        <div class="result-label">Modern Framework Implementation</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-number">TypeDoc</div>
+                        <div class="result-label">Comprehensive Documentation</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-number">GitHub Pages</div>
+                        <div class="result-label">Production Deployment</div>
+                    </div>
+                </div>
+                
+                <div class="section-content">
+                    <p>The myFlix Angular application serves as concrete evidence of my ability to translate user requirements into functional, professional web applications while maintaining the documentation and communication standards expected in professional development roles.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="case-study-cta">
+            <div class="container">
+                <h2 class="cta-title">Experience the Complete Application</h2>
+                <p>Explore the myFlix Angular application and review comprehensive technical documentation</p>
+                
+                <div class="cta-links">
+                    <a href="https://chels93.github.io/CineVault-Angular-client/" class="button" target="_blank">Live Demo</a>
+                    <a href="https://github.com/Chels93/CineVault-Angular-client" class="button" target="_blank">GitHub Repository</a>
+                    <a href="#" class="button" target="_blank">Technical Documentation</a>
+                    <a href="case-studies.html" class="button">Back to Case Studies</a>
+                </div>
+
+                <div class="tech-spec" style="margin-top: 40px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+                    <h4 style="color: white;">Technical Specifications Summary</h4>
+                    <div class="tech-list">
+                        <div class="tech-item" style="background: rgba(255,255,255,0.2); color: white;">Frontend: Angular 9+, Angular Material, TypeScript, SCSS</div>
+                        <div class="tech-item" style="background: rgba(255,255,255,0.2); color: white;">Backend: Node.js, Express.js, MongoDB (movie_api)</div>
+                        <div class="tech-item" style="background: rgba(255,255,255,0.2); color: white;">Documentation: TypeDoc, JSDoc, Technical Handoffs</div>
+                        <div class="tech-item" style="background: rgba(255,255,255,0.2); color: white;">Deployment: GitHub Pages, Automated Build Pipeline</div>
+                        <div class="tech-item" style="background: rgba(255,255,255,0.2); color: white;">Methodology: Agile, User Stories, Kanban Board</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+        <div class="social-media">
+            <a
+                href="https://medium.com/@cacguff/subscribe"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img src="img/Medium-Icon-Black.svg" alt="Medium" />
+            </a>
+            <a
+                href="https://github.com/Chels93"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img src="img/github-mark.png" alt="Github" />
+            </a>
+            <a
+                href="https://www.linkedin.com/in/chelseaguffogg/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img src="img/LinkedIn.png" alt="LinkedIn" />
+            </a>
+        </div>
+    </footer>
+    
+    <script src="js/menu-toggle.js"></script>
+</body>
+</html>
