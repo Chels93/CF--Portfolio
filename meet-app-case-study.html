@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta
       name="description"
-      content="Mobile Chat App Case Study - React Native development with Firebase integration, real-time messaging, and offline capabilities by Chelsea Guffogg."
+      content="Meet App Case Study - Progressive Web Application with React, Test-Driven Development, serverless architecture, and data visualization by Chelsea Guffogg."
     />
-    <title>Mobile Chat App Case Study - Chelsea Guffogg</title>
+    <title>Meet App Case Study - Chelsea Guffogg</title>
     
     <!-- Font and CSS links -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -353,6 +353,43 @@
             border: 2px solid var(--color-wine);
         }
 
+        /* TDD Process styling */
+        .tdd-cycle {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .tdd-step {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            text-align: center;
+            border-top: 4px solid var(--color-wine);
+        }
+
+        .tdd-step-number {
+            background: var(--color-wine);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem auto;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .tdd-step-title {
+            color: var(--color-rich-burgundy);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
         /* Results section */
         .case-study-results {
             background: linear-gradient(135deg, #faf9f6 0%, #f5f3f0 100%) !important;
@@ -500,6 +537,11 @@
                 grid-template-columns: 1fr;
                 gap: 25px;
             }
+
+            .tdd-cycle {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
         }
 
         @media (max-width: 768px) {
@@ -622,22 +664,22 @@
         <section class="case-study-hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1>Mobile Chat App Case Study</h1>
-                    <p class="hero-subtitle">A comprehensive cross-platform mobile chat application showcasing React Native development, Firebase integration, real-time messaging, and offline functionality capabilities.</p>
+                    <h1>Meet App Case Study</h1>
+                    <p class="hero-subtitle">A comprehensive serverless Progressive Web Application showcasing Test-Driven Development, Google Calendar API integration, AWS Lambda functions, and advanced data visualization capabilities.</p>
                     
                     <div class="hero-meta">
                         <div class="key-highlights">
                             <div class="highlight-item">
                                 <span class="highlight-label">Role</span>
-                                <span class="highlight-value">Mobile Developer & Technical Lead</span>
+                                <span class="highlight-value">Full-Stack Developer & Technical Lead</span>
                             </div>
                             <div class="highlight-item">
                                 <span class="highlight-label">Focus</span>
-                                <span class="highlight-value">React Native with Firebase Backend</span>
+                                <span class="highlight-value">PWA with Serverless Architecture</span>
                             </div>
                             <div class="highlight-item">
                                 <span class="highlight-label">Technologies</span>
-                                <span class="highlight-value">React Native, Expo, Firebase, Gifted Chat</span>
+                                <span class="highlight-value">React, AWS Lambda, TDD, PWA Features</span>
                             </div>
                         </div>
                     </div>
@@ -650,20 +692,20 @@
             <div class="container">
                 <div class="stats-grid">
                     <div class="stat-item">
-                        <div class="stat-number">4</div>
-                        <div class="stat-label">Weeks Development</div>
+                        <div class="stat-number">≥90%</div>
+                        <div class="stat-label">Test Coverage</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">2</div>
-                        <div class="stat-label">Platforms (iOS/Android)</div>
+                        <div class="stat-number">PWA</div>
+                        <div class="stat-label">Lighthouse Certified</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Offline Functionality</div>
+                        <div class="stat-number">TDD</div>
+                        <div class="stat-label">Development Methodology</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">6</div>
-                        <div class="stat-label">Core Features Implemented</div>
+                        <div class="stat-number">AWS</div>
+                        <div class="stat-label">Serverless Infrastructure</div>
                     </div>
                 </div>
             </div>
@@ -677,286 +719,309 @@
                 <div class="section">
                     <h2 class="section-title">Executive Summary</h2>
                     <div class="section-content">
-                        <p><strong>The Challenge:</strong> How can mobile users communicate seamlessly through real-time messaging while maintaining full functionality during network interruptions, sharing multimedia content, and accessing location services?</p>
+                        <p><strong>The Challenge:</strong> How can developers create scalable, maintainable web applications that work seamlessly offline while providing real-time data visualization and maintaining the highest code quality standards?</p>
                         
-                        <p>As part of Achievement 5 in the CareerFoundry Web Development program, I developed a comprehensive mobile chat application using React Native and Firebase. This project demonstrates proficiency in cross-platform mobile development, real-time data synchronization, offline functionality, and accessibility implementation following modern mobile development standards.</p>
+                        <p>As part of Achievement 4 in the CareerFoundry Web Development program, I developed a comprehensive Progressive Web Application using Test-Driven Development methodology. This project demonstrates expertise in modern web development practices including serverless architecture, PWA implementation, Google Calendar API integration, and advanced data visualization techniques.</p>
                         
                         <div class="key-insight">
                             <h4>Key Success Metrics</h4>
-                            <p>Delivered a fully functional cross-platform mobile application with real-time messaging, offline capabilities, image sharing, location services, and comprehensive accessibility features. The project showcases professional mobile development practices suitable for production environments.</p>
+                            <p>Delivered a fully functional PWA with ≥90% test coverage, complete offline functionality, serverless backend infrastructure, and comprehensive data visualization. The project showcases industry-standard development practices including TDD methodology and CI/CD implementation.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Problem Statement & Goals -->
                 <div class="section">
-                    <h2 class="section-title">Problem Statement & Project Goals</h2>
+                    <h2 class="section-title">Problem Statement & Technical Goals</h2>
                     <div class="section-content">
                         <div class="challenge-grid">
                             <div class="challenge-card">
-                                <h3 class="challenge-title">Real-time Communication Need</h3>
-                                <p>Mobile users require instant messaging capabilities that work seamlessly across different devices and network conditions without message loss or delays.</p>
+                                <h3 class="challenge-title">Scalable Architecture Challenge</h3>
+                                <p>Modern web applications require serverless infrastructure that scales automatically without backend maintenance while providing consistent performance and availability.</p>
                             </div>
                             <div class="challenge-card">
-                                <h3 class="challenge-title">Offline Functionality Requirement</h3>
-                                <p>Users need access to previous conversations and the ability to prepare messages even when network connectivity is unavailable or unreliable.</p>
+                                <h3 class="challenge-title">Code Quality Assurance</h3>
+                                <p>Development teams need comprehensive testing strategies that ensure high-quality code through Test-Driven Development practices and automated testing coverage.</p>
                             </div>
                             <div class="challenge-card">
-                                <h3 class="challenge-title">Multimedia & Location Sharing</h3>
-                                <p>Modern chat applications must support rich media sharing including photos from camera/gallery and location sharing through integrated mapping services.</p>
+                                <h3 class="challenge-title">Progressive Web App Requirements</h3>
+                                <p>Users expect modern web applications to provide native app experiences including offline functionality, installability, and cross-platform compatibility.</p>
                             </div>
                         </div>
 
                         <div class="tech-spec">
-                            <h4>Technical Requirements</h4>
+                            <h4>Technical Requirements & Implementation</h4>
                             <div class="tech-list">
-                                <div class="tech-item">React Native Framework</div>
-                                <div class="tech-item">Expo Development Platform</div>
-                                <div class="tech-item">Firebase Firestore Database</div>
-                                <div class="tech-item">Firebase Authentication</div>
-                                <div class="tech-item">Firebase Cloud Storage</div>
-                                <div class="tech-item">Gifted Chat Library</div>
-                                <div class="tech-item">AsyncStorage for Offline</div>
-                                <div class="tech-item">Accessibility Compliance</div>
+                                <div class="tech-item">React Frontend Framework</div>
+                                <div class="tech-item">Test-Driven Development (TDD)</div>
+                                <div class="tech-item">Google Calendar API & OAuth2</div>
+                                <div class="tech-item">AWS Lambda Serverless Functions</div>
+                                <div class="tech-item">Progressive Web App Features</div>
+                                <div class="tech-item">Service Worker Implementation</div>
+                                <div class="tech-item">Data Visualization (Charts)</div>
+                                <div class="tech-item">Performance Monitoring</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- User Stories Implementation -->
+                <!-- Test-Driven Development Process -->
                 <div class="section">
-                    <h2 class="section-title">User Stories & Requirements Implementation</h2>
+                    <h2 class="section-title">Test-Driven Development Methodology</h2>
                     <div class="section-content">
-                        <p>The mobile chat application successfully addresses all user requirements while demonstrating professional mobile development practices and modern app architecture.</p>
+                        <p>The entire application was built using Test-Driven Development practices, ensuring high code quality and comprehensive test coverage from the beginning of the development process.</p>
+
+                        <div class="tdd-cycle">
+                            <div class="tdd-step">
+                                <div class="tdd-step-number">1</div>
+                                <h4 class="tdd-step-title">Red: Write Failing Tests</h4>
+                                <p>Create comprehensive test scenarios based on user stories and feature requirements before implementing any functionality.</p>
+                            </div>
+                            <div class="tdd-step">
+                                <div class="tdd-step-number">2</div>
+                                <h4 class="tdd-step-title">Green: Implement Features</h4>
+                                <p>Write minimal code necessary to make tests pass, focusing on functionality over optimization in initial implementation.</p>
+                            </div>
+                            <div class="tdd-step">
+                                <div class="tdd-step-number">3</div>
+                                <h4 class="tdd-step-title">Refactor: Optimize Code</h4>
+                                <p>Improve code structure, performance, and maintainability while ensuring all tests continue to pass throughout refactoring.</p>
+                            </div>
+                        </div>
+
+                        <div class="key-insight">
+                            <h4>TDD Implementation Benefits</h4>
+                            <p>Following TDD methodology resulted in ≥90% test coverage, reduced debugging time during development, and provided confidence in code reliability during refactoring phases. This approach demonstrates professional development practices essential for collaborative team environments.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature Implementation -->
+                <div class="section">
+                    <h2 class="section-title">Core Feature Implementation</h2>
+                    <div class="section-content">
+                        <p>The Meet App implements six core features, each developed using comprehensive test scenarios and professional development practices.</p>
 
                         <div class="timeline">
                             <div class="timeline-item">
                                 <div class="timeline-marker"></div>
                                 <div class="timeline-content">
-                                    <h4>User Story 1: Easy Chat Room Access</h4>
-                                    <p><em>"As a new user, I want to be able to easily enter a chat room so I can quickly start talking to my friends and family."</em></p>
-                                    <p><strong>Implementation:</strong> Custom start screen with name entry and background color selection, followed by seamless navigation to chat interface.</p>
+                                    <h4>Feature 1: Filter Events by City</h4>
+                                    <p><strong>Implementation:</strong> Dynamic city search with autocomplete suggestions, default display of all events, and smooth filtering transitions.</p>
+                                    <p><strong>Test Scenarios:</strong> Default state behavior, suggestion list functionality, and city selection handling.</p>
                                 </div>
                             </div>
                             
                             <div class="timeline-item">
                                 <div class="timeline-marker"></div>
                                 <div class="timeline-content">
-                                    <h4>User Story 2: Real-time Messaging</h4>
-                                    <p><em>"As a user, I want to be able to send messages to my friends and family members to exchange the latest news."</em></p>
-                                    <p><strong>Implementation:</strong> Firebase Firestore integration with real-time listeners for instant message delivery and synchronization across devices.</p>
+                                    <h4>Feature 2: Show/Hide Event Details</h4>
+                                    <p><strong>Implementation:</strong> Collapsible event cards with smooth animations, detailed event information, and accessibility-compliant expand/collapse functionality.</p>
+                                    <p><strong>Test Scenarios:</strong> Default collapsed state, expansion behavior, and detail hiding functionality.</p>
                                 </div>
                             </div>
                             
                             <div class="timeline-item">
                                 <div class="timeline-marker"></div>
                                 <div class="timeline-content">
-                                    <h4>User Story 3: Image Sharing</h4>
-                                    <p><em>"As a user, I want to send images to my friends to show them what I'm currently doing."</em></p>
-                                    <p><strong>Implementation:</strong> Camera capture and gallery selection with Firebase Cloud Storage integration for secure image hosting and sharing.</p>
+                                    <h4>Feature 3: Specify Number of Events</h4>
+                                    <p><strong>Implementation:</strong> Configurable event display count with default of 32 events, user input validation, and dynamic list updates.</p>
+                                    <p><strong>Test Scenarios:</strong> Default count behavior and user-specified number handling.</p>
                                 </div>
                             </div>
 
                             <div class="timeline-item">
                                 <div class="timeline-marker"></div>
                                 <div class="timeline-content">
-                                    <h4>User Story 4: Location Sharing</h4>
-                                    <p><em>"As a user, I want to share my location with my friends to show them where I am."</em></p>
-                                    <p><strong>Implementation:</strong> GPS integration with interactive map views for location sharing through chat interface.</p>
+                                    <h4>Feature 4: Offline Functionality</h4>
+                                    <p><strong>Implementation:</strong> Service worker integration, cached data display, and graceful error handling for offline search attempts.</p>
+                                    <p><strong>Test Scenarios:</strong> Cached data access and offline search error handling.</p>
                                 </div>
                             </div>
 
                             <div class="timeline-item">
                                 <div class="timeline-marker"></div>
                                 <div class="timeline-content">
-                                    <h4>User Story 5: Offline Message Access</h4>
-                                    <p><em>"As a user, I want to be able to read my messages offline so I can reread conversations at any time."</em></p>
-                                    <p><strong>Implementation:</strong> AsyncStorage integration for local message persistence with intelligent sync when connectivity returns.</p>
+                                    <h4>Feature 5: Home Screen Installation</h4>
+                                    <p><strong>Implementation:</strong> PWA manifest configuration, installation prompts, and cross-platform home screen integration.</p>
+                                    <p><strong>Test Scenarios:</strong> App installation capability and home screen shortcut functionality.</p>
                                 </div>
                             </div>
 
                             <div class="timeline-item">
                                 <div class="timeline-marker"></div>
                                 <div class="timeline-content">
-                                    <h4>User Story 6: Accessibility Support</h4>
-                                    <p><em>"As a user with a visual impairment, I want to use a chat app that is compatible with a screen reader so that I can engage with a chat interface."</em></p>
-                                    <p><strong>Implementation:</strong> Comprehensive accessibility features including screen reader compatibility, semantic labeling, and WCAG compliance.</p>
+                                    <h4>Feature 6: Data Visualization</h4>
+                                    <p><strong>Implementation:</strong> Interactive scatter plot showing events per city and pie chart displaying event genre popularity with responsive design.</p>
+                                    <p><strong>Test Scenarios:</strong> Chart rendering accuracy and data visualization correctness.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Technical Implementation -->
+                <!-- Technical Architecture -->
                 <div class="section">
-                    <h2 class="section-title">Technical Implementation Journey</h2>
+                    <h2 class="section-title">Serverless Architecture & Implementation</h2>
                     <div class="section-content">
-                        <h3>Real-time Message Handling</h3>
+                        <h3>AWS Lambda Functions</h3>
                         <div class="code-block">
-<span class="code-comment">// Firebase Firestore real-time listener setup</span>
-<span class="code-keyword">useEffect</span>(() => {
-  <span class="code-keyword">let</span> unsubscribe;
-  <span class="code-keyword">if</span> (isConnected === <span class="code-keyword">true</span>) {
-    <span class="code-keyword">const</span> q = query(
-      collection(db, <span class="code-string">"messages"</span>),
-      orderBy(<span class="code-string">"createdAt"</span>, <span class="code-string">"desc"</span>)
-    );
-    unsubscribe = onSnapshot(q, (docs) => {
-      <span class="code-keyword">let</span> newMessages = [];
-      docs.forEach((doc) => {
-        newMessages.push({
-          id: doc.id,
-          ...doc.data(),
-          createdAt: <span class="code-keyword">new</span> Date(doc.data().createdAt.toMillis())
-        });
-      });
-      cacheMessages(newMessages);
-      setMessages(newMessages);
-    });
-  } <span class="code-keyword">else</span> {
-    loadCachedMessages();
-  }
-  <span class="code-keyword">return</span> () => unsubscribe && unsubscribe();
-}, [isConnected]);
-                        </div>
+<span class="code-comment">// AWS Lambda function for Google Calendar API authorization</span>
+<span class="code-keyword">const</span> { google } = <span class="code-keyword">require</span>(<span class="code-string">'googleapis'</span>);
 
-                        <h3>Offline Message Management</h3>
-                        <div class="code-block">
-<span class="code-comment">// AsyncStorage implementation for offline functionality</span>
-<span class="code-keyword">const</span> cacheMessages = <span class="code-keyword">async</span> (messagesToCache) => {
-  <span class="code-keyword">try</span> {
-    <span class="code-keyword">await</span> AsyncStorage.setItem(
-      <span class="code-string">'messages'</span>, 
-      JSON.stringify(messagesToCache)
-    );
-  } <span class="code-keyword">catch</span> (error) {
-    console.log(error.message);
-  }
-};
+<span class="code-keyword">exports</span>.handler = <span class="code-keyword">async</span> (event) => {
+  <span class="code-keyword">const</span> oAuth2Client = <span class="code-keyword">new</span> google.auth.OAuth2(
+    process.env.CLIENT_ID,
+    process.env.CLIENT_SECRET,
+    process.env.REDIRECT_URI
+  );
 
-<span class="code-keyword">const</span> loadCachedMessages = <span class="code-keyword">async</span> () => {
-  <span class="code-keyword">try</span> {
-    <span class="code-keyword">const</span> cachedMessages = <span class="code-keyword">await</span> AsyncStorage.getItem(<span class="code-string">'messages'</span>) || [];
-    setMessages(JSON.parse(cachedMessages));
-  } <span class="code-keyword">catch</span> (error) {
-    console.log(error.message);
-  }
-};
-                        </div>
-
-                        <h3>Image Upload and Storage</h3>
-                        <div class="code-block">
-<span class="code-comment">// Firebase Cloud Storage integration</span>
-<span class="code-keyword">const</span> uploadAndSendImage = <span class="code-keyword">async</span> (imageURI) => {
-  <span class="code-keyword">const</span> uniqueRefString = generateReference(imageURI);
-  <span class="code-keyword">const</span> newUploadRef = ref(storage, uniqueRefString);
-  <span class="code-keyword">const</span> response = <span class="code-keyword">await</span> fetch(imageURI);
-  <span class="code-keyword">const</span> blob = <span class="code-keyword">await</span> response.blob();
-  
-  uploadBytes(newUploadRef, blob).then(<span class="code-keyword">async</span> (snapshot) => {
-    <span class="code-keyword">const</span> imageURL = <span class="code-keyword">await</span> getDownloadURL(snapshot.ref);
-    onSend([{
-      _id: generateMessageId(),
-      text: <span class="code-string">""</span>,
-      createdAt: <span class="code-keyword">new</span> Date(),
-      user: user,
-      image: imageURL,
-    }]);
+  <span class="code-keyword">const</span> authUrl = oAuth2Client.generateAuthUrl({
+    access_type: <span class="code-string">'offline'</span>,
+    scope: [<span class="code-string">'https://www.googleapis.com/auth/calendar.readonly'</span>],
   });
+
+  <span class="code-keyword">return</span> {
+    statusCode: 200,
+    headers: {
+      <span class="code-string">'Access-Control-Allow-Origin'</span>: <span class="code-string">'*'</span>,
+      <span class="code-string">'Access-Control-Allow-Credentials'</span>: <span class="code-keyword">true</span>,
+    },
+    body: JSON.stringify({
+      authUrl: authUrl,
+    }),
+  };
 };
+                        </div>
+
+                        <h3>Service Worker Implementation</h3>
+                        <div class="code-block">
+<span class="code-comment">// Service Worker for offline functionality</span>
+<span class="code-keyword">const</span> CACHE_NAME = <span class="code-string">'meet-app-v1'</span>;
+<span class="code-keyword">const</span> urlsToCache = [
+  <span class="code-string">'/'</span>,
+  <span class="code-string">'/static/js/bundle.js'</span>,
+  <span class="code-string">'/static/css/main.css'</span>,
+  <span class="code-string">'/manifest.json'</span>
+];
+
+<span class="code-keyword">self</span>.addEventListener(<span class="code-string">'install'</span>, <span class="code-keyword">function</span>(event) {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(<span class="code-keyword">function</span>(cache) {
+        <span class="code-keyword">return</span> cache.addAll(urlsToCache);
+      })
+  );
+});
+
+<span class="code-keyword">self</span>.addEventListener(<span class="code-string">'fetch'</span>, <span class="code-keyword">function</span>(event) {
+  event.respondWith(
+    caches.match(event.request)
+      .then(<span class="code-keyword">function</span>(response) {
+        <span class="code-keyword">return</span> response || fetch(event.request);
+      })
+  );
+});
+                        </div>
+
+                        <div class="screenshot-placeholder">
+                            <p>Meet App Interface Screenshots showing city search functionality, event filtering, detailed event views, and interactive data visualization charts</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Core Features -->
+                <!-- Core Application Features -->
                 <div class="section">
-                    <h2 class="section-title">Core Application Features</h2>
-                    <div class="section-content">
-                        <p>The mobile chat application demonstrates comprehensive mobile development capabilities through six core feature implementations.</p>
-                    </div>
+                    <h2 class="section-title">Application Features & User Experience</h2>
                     
                     <div class="feature-grid">
                         <div class="feature-card">
-                            <div class="feature-icon">📱</div>
-                            <h3 class="feature-title">Custom Start Screen</h3>
-                            <p>Personalized user experience with name entry and background color selection, following exact design specifications with accessibility considerations.</p>
+                            <div class="feature-icon">🔍</div>
+                            <h3 class="feature-title">Smart City Search</h3>
+                            <p>Intelligent autocomplete search with Google Calendar API integration, providing real-time city suggestions and seamless event filtering.</p>
                         </div>
                         <div class="feature-card">
-                            <div class="feature-icon">💬</div>
-                            <h3 class="feature-title">Real-time Messaging</h3>
-                            <p>Gifted Chat integration with Firebase Firestore for instant message delivery, typing indicators, and cross-device synchronization.</p>
+                            <div class="feature-icon">📋</div>
+                            <h3 class="feature-title">Dynamic Event Display</h3>
+                            <p>Configurable event listing with expandable details, responsive design, and smooth animations for optimal user experience.</p>
                         </div>
                         <div class="feature-card">
-                            <div class="feature-icon">🔐</div>
-                            <h3 class="feature-title">Anonymous Authentication</h3>
-                            <p>Firebase Authentication implementation allowing seamless user access without registration barriers while maintaining security.</p>
+                            <div class="feature-icon">📊</div>
+                            <h3 class="feature-title">Data Visualization</h3>
+                            <p>Interactive scatter plots and pie charts providing insights into event distribution and genre popularity with responsive design.</p>
                         </div>
                         <div class="feature-card">
-                            <div class="feature-icon">📸</div>
-                            <h3 class="feature-title">Image Sharing</h3>
-                            <p>Complete multimedia support with camera capture, gallery selection, and Firebase Cloud Storage integration for secure image hosting.</p>
-                        </div>
-                        <div class="feature-card">
-                            <div class="feature-icon">📍</div>
-                            <h3 class="feature-title">Location Services</h3>
-                            <p>GPS-based location sharing with interactive map displays, enabling users to share current location through chat interface.</p>
+                            <div class="feature-icon">🌐</div>
+                            <h3 class="feature-title">Offline Capability</h3>
+                            <p>Complete offline functionality with service worker implementation, cached data access, and graceful error handling.</p>
                         </div>
                         <div class="feature-card">
                             <div class="feature-icon">📱</div>
-                            <h3 class="feature-title">Offline Functionality</h3>
-                            <p>Complete offline message access with AsyncStorage, intelligent sync mechanisms, and network state management for uninterrupted user experience.</p>
+                            <h3 class="feature-title">PWA Features</h3>
+                            <p>Full Progressive Web App capabilities including home screen installation, push notifications, and native app experience.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">☁️</div>
+                            <h3 class="feature-title">Serverless Backend</h3>
+                            <p>AWS Lambda functions providing scalable, cost-effective backend services with automatic scaling and high availability.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Technical Challenges -->
+                <!-- Testing Strategy -->
                 <div class="section">
-                    <h2 class="section-title">Technical Challenges & Solutions</h2>
+                    <h2 class="section-title">Comprehensive Testing Strategy</h2>
                     <div class="section-content">
                         <div class="challenge-grid">
                             <div class="challenge-card">
-                                <h3 class="challenge-title">Cross-Platform Compatibility</h3>
-                                <p><strong>Challenge:</strong> Ensuring consistent functionality and appearance across iOS and Android while accessing native device features.</p>
-                                <p><strong>Solution:</strong> Utilized React Native with Expo managed workflow for platform-specific API access while maintaining single codebase architecture.</p>
+                                <h3 class="challenge-title">Unit Testing</h3>
+                                <p><strong>Implementation:</strong> Jest-based component testing with mock data, covering all React components and utility functions.</p>
+                                <p><strong>Coverage:</strong> Individual component behavior, prop handling, and state management validation.</p>
                             </div>
                             <div class="challenge-card">
-                                <h3 class="challenge-title">Real-time Data Synchronization</h3>
-                                <p><strong>Challenge:</strong> Creating seamless real-time messaging across varying network conditions with reliable message delivery.</p>
-                                <p><strong>Solution:</strong> Implemented Firebase Firestore real-time listeners with comprehensive error handling and automatic retry mechanisms.</p>
+                                <h3 class="challenge-title">Integration Testing</h3>
+                                <p><strong>Implementation:</strong> API integration testing with real Google Calendar data and serverless function validation.</p>
+                                <p><strong>Coverage:</strong> Component interaction, data flow, and API communication testing.</p>
                             </div>
                             <div class="challenge-card">
-                                <h3 class="challenge-title">Offline-First Architecture</h3>
-                                <p><strong>Challenge:</strong> Providing complete chat functionality during network interruptions while ensuring data integrity upon reconnection.</p>
-                                <p><strong>Solution:</strong> Developed AsyncStorage-based local persistence with intelligent synchronization strategies for seamless offline-to-online transitions.</p>
+                                <h3 class="challenge-title">End-to-End Testing</h3>
+                                <p><strong>Implementation:</strong> Automated user acceptance testing covering complete user workflows and feature scenarios.</p>
+                                <p><strong>Coverage:</strong> Full application functionality and user experience validation.</p>
                             </div>
+                        </div>
+
+                        <div class="key-insight">
+                            <h4>Testing Achievement</h4>
+                            <p>Achieved ≥90% test coverage through comprehensive testing strategy, demonstrating professional development practices essential for maintaining code quality in production environments. The testing approach ensures reliability and facilitates confident refactoring and feature additions.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Learning Outcomes -->
                 <div class="section">
-                    <h2 class="section-title">Professional Development & Learning Outcomes</h2>
+                    <h2 class="section-title">Professional Development & Technical Mastery</h2>
                     <div class="section-content">
-                        <p>This project provided comprehensive exposure to mobile development practices and demonstrated proficiency in technologies essential for modern mobile application development.</p>
-
-                        <div class="key-insight">
-                            <h4>Most Valuable Learning Experience</h4>
-                            <p>Implementing offline-first architecture revealed the complexity of mobile app state management and the importance of graceful degradation in network-dependent applications. This experience directly translates to building robust applications for real-world usage scenarios.</p>
-                        </div>
+                        <p>This project provided comprehensive exposure to modern web development practices, demonstrating proficiency in cutting-edge technologies and methodologies valued in professional development environments.</p>
 
                         <div class="tech-spec">
                             <h4>Key Technical Skills Demonstrated</h4>
                             <ul>
-                                <li><strong>React Native Development:</strong> Component architecture, navigation, platform-specific implementations, and performance optimization</li>
-                                <li><strong>Firebase Integration:</strong> Real-time databases, authentication, cloud storage, and security rules configuration</li>
-                                <li><strong>Mobile UX Design:</strong> Touch-friendly interfaces, responsive layouts, and accessibility compliance for mobile devices</li>
-                                <li><strong>Offline-First Development:</strong> Local data persistence, synchronization strategies, and network state management</li>
-                                <li><strong>Third-Party Library Integration:</strong> Gifted Chat customization, Expo APIs, and external service integration</li>
+                                <li><strong>Test-Driven Development:</strong> Complete TDD cycle implementation with comprehensive test scenarios and high coverage standards</li>
+                                <li><strong>Serverless Architecture:</strong> AWS Lambda function development, deployment, and management for scalable backend services</li>
+                                <li><strong>Progressive Web Apps:</strong> Service worker implementation, offline functionality, and PWA certification standards</li>
+                                <li><strong>API Integration:</strong> Google Calendar API with OAuth2 authentication and secure data handling</li>
+                                <li><strong>Data Visualization:</strong> Interactive chart implementation with responsive design and user interaction</li>
+                                <li><strong>Performance Monitoring:</strong> APM tool integration for continuous application performance tracking</li>
                             </ul>
                         </div>
 
+                        <div class="key-insight">
+                            <h4>Most Valuable Learning Experience</h4>
+                            <p>Implementing TDD methodology throughout the entire development process revealed the importance of comprehensive planning and requirement analysis before code implementation. This approach significantly reduced debugging time and provided confidence in code reliability, directly translating to professional development practices valued in collaborative team environments.</p>
+                        </div>
+
                         <div class="screenshot-placeholder">
-                            <p>Mobile Chat App Screenshots showing start screen customization, real-time messaging interface, image sharing capabilities, and location services integration</p>
+                            <p>Development Process Screenshots showing TDD implementation, test coverage reports, PWA Lighthouse audit results, and AWS Lambda function deployment dashboard</p>
                         </div>
                     </div>
                 </div>
@@ -969,25 +1034,25 @@
                 <h2 class="section-title">Technical Achievements & Success Metrics</h2>
                 <div class="results-grid">
                     <div class="result-item">
-                        <div class="result-number">100%</div>
-                        <div class="result-label">Requirements Fulfilled</div>
+                        <div class="result-number">≥90%</div>
+                        <div class="result-label">Test Coverage Achieved</div>
                     </div>
                     <div class="result-item">
-                        <div class="result-number">React Native</div>
-                        <div class="result-label">Cross-Platform Framework</div>
+                        <div class="result-number">PWA</div>
+                        <div class="result-label">Lighthouse Certified</div>
                     </div>
                     <div class="result-item">
-                        <div class="result-number">Firebase</div>
-                        <div class="result-label">Backend Infrastructure</div>
+                        <div class="result-number">TDD</div>
+                        <div class="result-label">Methodology Mastered</div>
                     </div>
                     <div class="result-item">
-                        <div class="result-number">Offline-First</div>
-                        <div class="result-label">Architecture Approach</div>
+                        <div class="result-number">Serverless</div>
+                        <div class="result-label">Architecture Implemented</div>
                     </div>
                 </div>
                 
                 <div class="section-content">
-                    <p>The Mobile Chat App demonstrates comprehensive mobile development expertise, from cross-platform architecture through real-time data synchronization, while maintaining professional development standards essential for production mobile applications.</p>
+                    <p>The Meet App demonstrates comprehensive modern web development expertise, from Test-Driven Development methodology through serverless architecture implementation, while maintaining industry-standard code quality and performance benchmarks essential for production applications.</p>
                 </div>
             </div>
         </section>
@@ -995,22 +1060,23 @@
         <!-- Call to Action -->
         <section class="case-study-cta">
             <div class="container">
-                <h2 class="cta-title">Explore the Mobile Application</h2>
-                <p>Review comprehensive mobile development implementation and technical documentation</p>
+                <h2 class="cta-title">Experience the Progressive Web Application</h2>
+                <p>Explore comprehensive TDD implementation, serverless architecture, and advanced data visualization</p>
                 
                 <div class="cta-links">
-                    <a href="https://github.com/Chels93/chat-app" class="button" target="_blank">GitHub Repository</a>
+                    <a href="https://chels93.github.io/meet/" class="button" target="_blank">Live PWA Demo</a>
+                    <a href="https://github.com/Chels93/meet" class="button" target="_blank">GitHub Repository</a>
                     <a href="case-studies.html" class="button">Back to Case Studies</a>
                 </div>
 
                 <div class="tech-spec" style="margin-top: 40px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
                     <h4 style="color: white;">Technical Specifications Summary</h4>
                     <div class="tech-list">
-                        <div class="tech-item" style="background: rgba(255,255,255,0.2); color: white;">Framework: React Native with Expo</div>
-                        <div class="tech-item" style="background: rgba(255,255,255,0.2); color: white;">Backend: Firebase (Firestore, Auth, Storage)</div>
-                        <div class="tech-item" style="background: rgba(255,255,255,0.2); color: white;">UI Library: Gifted Chat with Custom Styling</div>
-                        <div class="tech-item" style="background: rgba(255,255,255,0.2); color: white;">Storage: AsyncStorage for Offline Persistence</div>
-                        <div class="tech-item" style="background: rgba(255,255,255,0.2); color: white;">Features: Real-time Messaging, Image/Location Sharing</div>
+                        <div class="tech-item" style="background: rgba(255,255,255,0.2); color: white;">Frontend: React with PWA Features</div>
+                        <div class="tech-item" style="background: rgba(255,255,255,0.2); color: white;">Backend: AWS Lambda Serverless Functions</div>
+                        <div class="tech-item" style="background: rgba(255,255,255,0.2); color: white;">API: Google Calendar with OAuth2 Authentication</div>
+                        <div class="tech-item" style="background: rgba(255,255,255,0.2); color: white;">Testing: TDD with ≥90% Coverage (Jest, Enzyme)</div>
+                        <div class="tech-item" style="background: rgba(255,255,255,0.2); color: white;">Visualization: Recharts for Data Analytics</div>
                     </div>
                 </div>
             </div>
