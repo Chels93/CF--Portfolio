@@ -384,6 +384,32 @@
             transform: scale(1.02);
         }
         
+        /* Three-image layout for development process */
+        .screenshot-triple-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .screenshot-triple-item {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(139, 38, 53, 0.15);
+            border: 1px solid rgba(139, 38, 53, 0.1);
+        }
+        
+        .screenshot-triple-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .screenshot-triple-item:hover img {
+            transform: scale(1.02);
+        }
+        
         .image-caption {
             padding: 15px 20px;
             margin: 0;
@@ -604,6 +630,11 @@
                 grid-template-columns: 1fr;
                 gap: 15px;
             }
+            
+            .screenshot-triple-container {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -663,6 +694,11 @@
             }
             
             .screenshot-dual-container {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .screenshot-triple-container {
                 grid-template-columns: 1fr;
                 gap: 15px;
             }
@@ -1094,8 +1130,19 @@
                             <p>Implementing TDD methodology throughout the entire development process revealed the importance of comprehensive planning and requirement analysis before code implementation. This approach significantly reduced debugging time and provided confidence in code reliability, directly translating to professional development practices valued in collaborative team environments.</p>
                         </div>
 
-                        <div class="screenshot-placeholder">
-                            <p>Development Process Screenshots showing TDD implementation, test coverage reports, PWA Lighthouse audit results, and AWS Lambda function deployment dashboard</p>
+                        <div class="screenshot-triple-container">
+                            <div class="screenshot-triple-item">
+                                <img src="img/meet-app-tdd.png" alt="Test-Driven Development implementation showing test coverage reports and testing framework setup" />
+                                <p class="image-caption"><em>TDD Implementation with Jest testing framework and comprehensive test coverage</em></p>
+                            </div>
+                            <div class="screenshot-triple-item">
+                                <img src="img/meet-app-pwa.png" alt="Progressive Web App Lighthouse audit results showing PWA certification scores" />
+                                <p class="image-caption"><em>PWA Lighthouse audit results demonstrating certification standards</em></p>
+                            </div>
+                            <div class="screenshot-triple-item">
+                                <img src="img/meet-app-lambda-function.png" alt="AWS Lambda function deployment dashboard showing serverless infrastructure setup" />
+                                <p class="image-caption"><em>AWS Lambda function deployment dashboard for serverless backend services</em></p>
+                            </div>
                         </div>
                     </div>
                 </div>
