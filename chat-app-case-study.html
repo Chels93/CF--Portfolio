@@ -337,20 +337,65 @@
             border-left: 3px solid var(--color-deep-rose);
         }
 
-        /* Screenshot placeholders */
-        .screenshot-placeholder {
-            background: rgba(196, 67, 87, 0.05);
-            border-radius: 12px;
-            padding: 25px;
-            text-align: center;
-            margin: 25px 0;
-            border: 2px solid var(--color-wine);
-            transition: all 0.3s ease;
+        /* Media showcase styling */
+        .media-showcase {
+            margin: 40px 0;
+            padding: 30px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(139, 38, 53, 0.08);
+            border: 1px solid rgba(139, 38, 53, 0.1);
         }
-        
-        .screenshot-placeholder:hover {
-            background: rgba(196, 67, 87, 0.08);
-            border: 2px solid var(--color-wine);
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .media-item {
+            text-align: center;
+        }
+
+        .showcase-image,
+        .showcase-video {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(139, 38, 53, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .showcase-image:hover,
+        .showcase-video:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(139, 38, 53, 0.2);
+        }
+
+        .showcase-video {
+            background: #f8f9fa;
+            border: 2px solid var(--color-deep-rose);
+        }
+
+        .media-caption {
+            margin-top: 20px;
+            padding: 0 10px;
+        }
+
+        .media-caption h4 {
+            color: var(--color-rich-burgundy);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .media-caption p {
+            color: var(--color-mauve);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 0;
         }
 
         /* Results section */
@@ -500,6 +545,15 @@
                 grid-template-columns: 1fr;
                 gap: 25px;
             }
+
+            .media-grid {
+                gap: 30px;
+            }
+            
+            .showcase-image,
+            .showcase-video {
+                max-width: 350px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -557,6 +611,29 @@
                 max-width: 300px;
                 text-align: center;
             }
+
+            .media-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .media-showcase {
+                padding: 25px 20px;
+                margin: 30px 0;
+            }
+            
+            .showcase-image,
+            .showcase-video {
+                max-width: 100%;
+            }
+            
+            .media-caption h4 {
+                font-size: 1.1rem;
+            }
+            
+            .media-caption p {
+                font-size: 0.9rem;
+            }
         }
 
         @media (max-width: 576px) {
@@ -594,6 +671,16 @@
             .tech-list {
                 grid-template-columns: 1fr;
                 gap: 10px;
+            }
+
+            .media-showcase {
+                padding: 20px 15px;
+                margin: 25px 0;
+            }
+            
+            .media-caption {
+                margin-top: 15px;
+                padding: 0 5px;
             }
         }
     </style>
@@ -955,8 +1042,26 @@
                             </ul>
                         </div>
 
-                        <div class="screenshot-placeholder">
-                            <p>Mobile Chat App Screenshots showing start screen customization, real-time messaging interface, image sharing capabilities, and location services integration</p>
+                        <div class="media-showcase">
+                            <div class="media-grid">
+                                <div class="media-item">
+                                    <img src="/img/chat-appScreenshot.png" alt="Mobile Chat App Screenshot showing start screen customization and real-time messaging interface" class="showcase-image" />
+                                    <div class="media-caption">
+                                        <h4>Mobile Chat Interface</h4>
+                                        <p>Start screen customization and real-time messaging interface demonstrating React Native UI implementation</p>
+                                    </div>
+                                </div>
+                                <div class="media-item">
+                                    <video controls class="showcase-video" width="400" height="300">
+                                        <source src="/videos/chat-app-screen-recording.mp4" type="video/mp4" />
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <div class="media-caption">
+                                        <h4>Firebase Integration Demo</h4>
+                                        <p>Live demonstration of Firebase features: image sharing from library, camera capture, and location services integration</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
